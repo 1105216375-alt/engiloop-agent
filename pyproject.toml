@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "engineering-domain-agent"
+version = "0.1.0"
+description = "Engineering-domain neuro-symbolic execution, evidence verification and governed memory"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "Apache-2.0"
+license-files = ["LICENSE", "NOTICE"]
+authors = [{name = "1105216375-alt"}]
+dependencies = []
+
+[project.optional-dependencies]
+reports = ["python-docx>=1.2,<2"]
+dev = ["pytest>=7.4,<9", "python-docx>=1.2,<2", "build>=1.2,<2"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["engineering_agent*", "nskernel*", "bip_runtime*", "domain*", "legacy_v7*", "examples*"]
+exclude = ["tests*", "work*", "outputs*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-q"

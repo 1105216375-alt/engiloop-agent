@@ -1,0 +1,11 @@
+Engineering Domain Agent
+Copyright 2026 1105216375-alt and contributors
+
+This release contains selected source mechanisms extracted and adapted from
+the author's bridge-inspection agent project, plus new public integration
+adapters and synthetic examples. See docs/source-map.md and
+docs/source-provenance.json for the extraction boundary.
+
+No organizational logo, company endorsement, private bridge archive, inspection
+report, photograph, normative-text corpus or model credential is included.
+This notice is attribution, not proof of ownership or engineering certification.

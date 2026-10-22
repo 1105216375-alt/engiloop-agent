@@ -1,0 +1,756 @@
+{
+  "scope": "Source-code extraction only. Not a legal authorship certificate or field validation.",
+  "files": [
+    {
+      "source": "bip_runtime/agent_input_boundary.py",
+      "target": "bip_runtime/agent_input_boundary.py",
+      "source_sha256": "4ba10ac7c0c2dbbad861636eaf4b2d3c4a897295c225730c508155db83b74c5d",
+      "initial_export_sha256": "4ba10ac7c0c2dbbad861636eaf4b2d3c4a897295c225730c508155db83b74c5d",
+      "adaptations": []
+    },
+    {
+      "source": "bip_runtime/archive_entity_guard.py",
+      "target": "bip_runtime/archive_entity_guard.py",
+      "source_sha256": "d160737b1bf802bc85008466ac105aba8f95671fd1b1074e6b1cee0f22576073",
+      "initial_export_sha256": "d160737b1bf802bc85008466ac105aba8f95671fd1b1074e6b1cee0f22576073",
+      "adaptations": []
+    },
+    {
+      "source": "bip_runtime/archive_scope.py",
+      "target": "bip_runtime/archive_scope.py",
+      "source_sha256": "27524cf0e5febbeee70779e7af1af94277467bdd5f10683bd11f4d5d6c8a52dc",
+      "initial_export_sha256": "27524cf0e5febbeee70779e7af1af94277467bdd5f10683bd11f4d5d6c8a52dc",
+      "adaptations": []
+    },
+    {
+      "source": "bip_runtime/claim_grounding.py",
+      "target": "bip_runtime/claim_grounding.py",
+      "source_sha256": "a96c1af81dab636e973f86d6a5cabea5289a62ed4e207e9843d8d471a0f43e8f",
+      "initial_export_sha256": "a96c1af81dab636e973f86d6a5cabea5289a62ed4e207e9843d8d471a0f43e8f",
+      "adaptations": []
+    },
+    {
+      "source": "bip_runtime/diagnosis_scope.py",
+      "target": "bip_runtime/diagnosis_scope.py",
+      "source_sha256": "3206009fdd273111d4026a814a9f187f20691317193f9699ea42a98e8bf780d4",
+      "initial_export_sha256": "3206009fdd273111d4026a814a9f187f20691317193f9699ea42a98e8bf780d4",
+      "adaptations": []
+    },
+    {
+      "source": "bip_runtime/euler_memory.py",
+      "target": "bip_runtime/euler_memory.py",
+      "source_sha256": "9d297c86d3ca8bb90f8fbc4963f40eb7e144dbea3f6bb0fac729e056c882b969",
+      "initial_export_sha256": "9d297c86d3ca8bb90f8fbc4963f40eb7e144dbea3f6bb0fac729e056c882b969",
+      "adaptations": []
+    },
+    {
+      "source": "bip_runtime/evidence_capabilities.py",
+      "target": "bip_runtime/evidence_capabilities.py",
+      "source_sha256": "b4b0f625c093e67fb7b00357a7961eca69a453fbeb824567ea1a5dcae58fbe6b",
+      "initial_export_sha256": "b4b0f625c093e67fb7b00357a7961eca69a453fbeb824567ea1a5dcae58fbe6b",
+      "adaptations": []
+    },
+    {
+      "source": "bip_runtime/jobs.py",
+      "target": "bip_runtime/jobs.py",
+      "source_sha256": "ad5ffa79496214a44ba7ff08b85381cb708feae5832691932adbeedcd0cdae90",
+      "initial_export_sha256": "ad5ffa79496214a44ba7ff08b85381cb708feae5832691932adbeedcd0cdae90",
+      "adaptations": []
+    },
+    {
+      "source": "bip_runtime/native_tracing.py",
+      "target": "bip_runtime/native_tracing.py",
+      "source_sha256": "a80b86f1fecfef0c0f54a4c6837ba51e82a1765f3d4de3882466b2d9c5ceebf5",
+      "initial_export_sha256": "a80b86f1fecfef0c0f54a4c6837ba51e82a1765f3d4de3882466b2d9c5ceebf5",
+      "adaptations": []
+    },
+    {
+      "source": "bip_runtime/prompt_injection_guard.py",
+      "target": "bip_runtime/prompt_injection_guard.py",
+      "source_sha256": "6eebbd688c51029a43ffcfe4dfc08425686693064530b4c19723b9ca4ea37218",
+      "initial_export_sha256": "6eebbd688c51029a43ffcfe4dfc08425686693064530b4c19723b9ca4ea37218",
+      "adaptations": []
+    },
+    {
+      "source": "bip_runtime/regulation_input_guard.py",
+      "target": "bip_runtime/regulation_input_guard.py",
+      "source_sha256": "46b071802639dd194b8fb5df9cfc2db7285e5f4a766616c11157fa49ce8f2d81",
+      "initial_export_sha256": "46b071802639dd194b8fb5df9cfc2db7285e5f4a766616c11157fa49ce8f2d81",
+      "adaptations": []
+    },
+    {
+      "source": "bip_runtime/semantic_frame.py",
+      "target": "bip_runtime/semantic_frame.py",
+      "source_sha256": "3fbbf4218cee2451d83d002507ec9ad805bb07ff22eb1ff3272f9c58e15216b4",
+      "initial_export_sha256": "3fbbf4218cee2451d83d002507ec9ad805bb07ff22eb1ff3272f9c58e15216b4",
+      "adaptations": []
+    },
+    {
+      "source": "bip_runtime/semantic_frame_v2.py",
+      "target": "bip_runtime/semantic_frame_v2.py",
+      "source_sha256": "be06dfd70d0653f861272334e962aae1863e8475928385744af741b21b62f8a5",
+      "initial_export_sha256": "be06dfd70d0653f861272334e962aae1863e8475928385744af741b21b62f8a5",
+      "adaptations": []
+    },
+    {
+      "source": "bip_runtime/semantic_llm_parser.py",
+      "target": "bip_runtime/semantic_llm_parser.py",
+      "source_sha256": "e7c7c3e95e77f36a6e0d11288bf95fef8f81cffe0a70370b3a14d612d8946846",
+      "initial_export_sha256": "e7c7c3e95e77f36a6e0d11288bf95fef8f81cffe0a70370b3a14d612d8946846",
+      "adaptations": []
+    },
+    {
+      "source": "domain/divergence_controller.py",
+      "target": "domain/divergence_controller.py",
+      "source_sha256": "b677d3087ddd22e53e2e059131c32c0c25cc2c267f5eb7f983b8901a2c51fa96",
+      "initial_export_sha256": "b677d3087ddd22e53e2e059131c32c0c25cc2c267f5eb7f983b8901a2c51fa96",
+      "adaptations": []
+    },
+    {
+      "source": "domain/reasoning_bridge.py",
+      "target": "domain/reasoning_bridge.py",
+      "source_sha256": "96449b4d976105073d52c3e1004c550f0b066456d2975a6a446f9c2aa268a5a4",
+      "initial_export_sha256": "bf2ba76c9112cd6dd0a6398db5d8618a092506098cef3fb02ccb7a40d94fdd22",
+      "adaptations": [
+        "removed case-specific documentation statistics"
+      ]
+    },
+    {
+      "source": "legacy_v7/core/agents.py",
+      "target": "legacy_v7/core/agents.py",
+      "source_sha256": "9af59d6ee2ed2688d74d637dc03c2d1a0ae46cba4b325d7c4f03b886ed94de8b",
+      "initial_export_sha256": "dab325b3fdce653481fb08f7f633bec9fcc451915a57501eae91b3da319eb624",
+      "adaptations": [
+        "package-relative imports; public configuration adapter"
+      ]
+    },
+    {
+      "source": "legacy_v7/core/claim_verifier.py",
+      "target": "legacy_v7/core/claim_verifier.py",
+      "source_sha256": "a8aebf53b7e0dfed2fc3ca49708aad3d41a4b2b5781dfe0a9996b04527d07f8f",
+      "initial_export_sha256": "beb9150c8e7c2c83aa4b5a4c25e511513da8d4e1dbf0fcde2036ab61a3148402",
+      "adaptations": [
+        "package-relative imports; public configuration adapter"
+      ]
+    },
+    {
+      "source": "legacy_v7/core/knowledge_graph.py",
+      "target": "legacy_v7/core/knowledge_graph.py",
+      "source_sha256": "6e74015b44ac2503da44fa4ec2056e7f39ddc7bc3dfdb3345666aa110ad89e71",
+      "initial_export_sha256": "141f0f12e143cdcc680b8f064245f3e276befa0904b5890f0f0587e2935ce02c",
+      "adaptations": [
+        "package-relative imports; public configuration adapter"
+      ]
+    },
+    {
+      "source": "legacy_v7/core/ontology.py",
+      "target": "legacy_v7/core/ontology.py",
+      "source_sha256": "1eb35f27ac930e1f635dd0d0ab34308a1f4ee617278b9aa67c7b35512fecc9af",
+      "initial_export_sha256": "1eb35f27ac930e1f635dd0d0ab34308a1f4ee617278b9aa67c7b35512fecc9af",
+      "adaptations": [
+        "package-relative imports; public configuration adapter"
+      ]
+    },
+    {
+      "source": "legacy_v7/core/repair_report_audit.py",
+      "target": "legacy_v7/core/repair_report_audit.py",
+      "source_sha256": "976c83288a65b752fa197f76d75ce9440b4f1d1d2ee459b81ee68228da89318d",
+      "initial_export_sha256": "976c83288a65b752fa197f76d75ce9440b4f1d1d2ee459b81ee68228da89318d",
+      "adaptations": [
+        "package-relative imports; public configuration adapter"
+      ]
+    },
+    {
+      "source": "legacy_v7/core/report_parser_v2.py",
+      "target": "legacy_v7/core/report_parser_v2.py",
+      "source_sha256": "714fed16a1e1992f0a5cc95ef5c8e72a2b85b1764bf84ba03c41d1341ba62390",
+      "initial_export_sha256": "a8467c7429ff5be7a49ec31666b12e23f35f2cfde6fdd1f81f54f95da757502d",
+      "adaptations": [
+        "package-relative imports; public configuration adapter",
+        "generalized example project identifier"
+      ]
+    },
+    {
+      "source": "legacy_v7/core/report_score_extractor.py",
+      "target": "legacy_v7/core/report_score_extractor.py",
+      "source_sha256": "a0f9f42a130f65f7de72a2dcb39449f03f022c681608dd2a3255723efde46298",
+      "initial_export_sha256": "a0f9f42a130f65f7de72a2dcb39449f03f022c681608dd2a3255723efde46298",
+      "adaptations": [
+        "package-relative imports; public configuration adapter"
+      ]
+    },
+    {
+      "source": "legacy_v7/core/score_governance.py",
+      "target": "legacy_v7/core/score_governance.py",
+      "source_sha256": "b72f705206024a017bd41a3f0627e2465fd8519b4b754a5c3e4e3a15c0f8472f",
+      "initial_export_sha256": "b72f705206024a017bd41a3f0627e2465fd8519b4b754a5c3e4e3a15c0f8472f",
+      "adaptations": [
+        "package-relative imports; public configuration adapter"
+      ]
+    },
+    {
+      "source": "legacy_v7/core/scoring_agent.py",
+      "target": "legacy_v7/core/scoring_agent.py",
+      "source_sha256": "68590246c79310495a671caa83a33b46848c2a2e4b1e1c14d70b32ef1616d511",
+      "initial_export_sha256": "9a615da6df1863eaf4a7b0f613bd981c8a6c5e542adb103ade4f3d5d18a8d1ae",
+      "adaptations": [
+        "package-relative imports; public configuration adapter"
+      ]
+    },
+    {
+      "source": "legacy_v7/core/state_store.py",
+      "target": "legacy_v7/core/state_store.py",
+      "source_sha256": "9b68e6f1efd3f56f1782ae6df84f7785fe2a994220e81506f67f071d80432c79",
+      "initial_export_sha256": "9b68e6f1efd3f56f1782ae6df84f7785fe2a994220e81506f67f071d80432c79",
+      "adaptations": [
+        "package-relative imports; public configuration adapter"
+      ]
+    },
+    {
+      "source": "nskernel/__init__.py",
+      "target": "nskernel/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "initial_export_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "adaptations": []
+    },
+    {
+      "source": "nskernel/cognition/__init__.py",
+      "target": "nskernel/cognition/__init__.py",
+      "source_sha256": "484d57638745cc76fef357db579ab72de27ddadb653ac73542468f598830a224",
+      "initial_export_sha256": "484d57638745cc76fef357db579ab72de27ddadb653ac73542468f598830a224",
+      "adaptations": []
+    },
+    {
+      "source": "nskernel/cognition/identity/__init__.py",
+      "target": "nskernel/cognition/identity/__init__.py",
+      "source_sha256": "f260626c00aaa1ac9b076e52947361c5be5df87187e3b625602c90db452dcffe",
+      "initial_export_sha256": "f260626c00aaa1ac9b076e52947361c5be5df87187e3b625602c90db452dcffe",
+      "adaptations": []
+    },
+    {
+      "source": "nskernel/cognition/identity/guard.py",
+      "target": "nskernel/cognition/identity/guard.py",
+      "source_sha256": "39d0d1419c27956e0319ebb98104b3d50a3c23ac92ab729f2857e6ef0be05255",
+      "initial_export_sha256": "39d0d1419c27956e0319ebb98104b3d50a3c23ac92ab729f2857e6ef0be05255",
+      "adaptations": []
+    },
+    {
+      "source": "nskernel/cognition/intent/__init__.py",
+      "target": "nskernel/cognition/intent/__init__.py",
+      "source_sha256": "3cac7ad1f8f179ea20622347fe6c4132703a6dad372fdb4f3962b9e25f08a0af",
+      "initial_export_sha256": "3cac7ad1f8f179ea20622347fe6c4132703a6dad372fdb4f3962b9e25f08a0af",
+      "adaptations": []
+    },
+    {
+      "source": "nskernel/cognition/intent/base.py",
+      "target": "nskernel/cognition/intent/base.py",
+      "source_sha256": "ffc30f171d3c4bf775f71cca9b927d2acdb4735d29ce08fe66d8ae72a68b8983",
+      "initial_export_sha256": "ffc30f171d3c4bf775f71cca9b927d2acdb4735d29ce08fe66d8ae72a68b8983",
+      "adaptations": []
+    },
+    {
+      "source": "nskernel/cognition/persona/__init__.py",
+      "target": "nskernel/cognition/persona/__init__.py",
+      "source_sha256": "300ab01320042fea74e839a0dcd27660c39d0c850c143b3e36d825e67f6ad709",
+      "initial_export_sha256": "300ab01320042fea74e839a0dcd27660c39d0c850c143b3e36d825e67f6ad709",
+      "adaptations": []
+    },
+    {
+      "source": "nskernel/cognition/persona/base.py",
+      "target": "nskernel/cognition/persona/base.py",
+      "source_sha256": "d7b600275da08259b9929efd2f227533b9f81253f3bdd8605e05bd0761dd8682",
+      "initial_export_sha256": "d7b600275da08259b9929efd2f227533b9f81253f3bdd8605e05bd0761dd8682",
+      "adaptations": []
+    },
+    {
+      "source": "nskernel/cognition/persona/master.py",
+      "target": "nskernel/cognition/persona/master.py",
+      "source_sha256": "1fa50e003e8bdc76be1ff71b515b001d3659a6f9ab82ffad606eb4f233d63b5a",
+      "initial_export_sha256": "1fa50e003e8bdc76be1ff71b515b001d3659a6f9ab82ffad606eb4f233d63b5a",
+      "adaptations": []
+    },
+    {
+      "source": "nskernel/cognition/persona/rigor.py",
+      "target": "nskernel/cognition/persona/rigor.py",
+      "source_sha256": "0128d5d94b195db47e156a35d4bde73d945fe66c473d579b1980eefcc1e2ea60",
+      "initial_export_sha256": "0128d5d94b195db47e156a35d4bde73d945fe66c473d579b1980eefcc1e2ea60",
+      "adaptations": []
+    },
+    {
+      "source": "nskernel/cognition/persona/router.py",
+      "target": "nskernel/cognition/persona/router.py",
+      "source_sha256": "b47b77a51cf381dad0295aef8cff4cbdb2aa7aa1e528c990113c076866f3977e",
+      "initial_export_sha256": "b47b77a51cf381dad0295aef8cff4cbdb2aa7aa1e528c990113c076866f3977e",
+      "adaptations": []
+    },
+    {
+      "source": "nskernel/cognition/persona/senior.py",
+      "target": "nskernel/cognition/persona/senior.py",
+      "source_sha256": "2d913e3689fc3e1910f4e59ac4569823cba0d23a658eeaa9122a9256c5c9ece2",
+      "initial_export_sha256": "2d913e3689fc3e1910f4e59ac4569823cba0d23a658eeaa9122a9256c5c9ece2",
+      "adaptations": []
+    },
+    {
+      "source": "nskernel/cognition/persona/shared_guards.py",
+      "target": "nskernel/cognition/persona/shared_guards.py",
+      "source_sha256": "eea10f8eab136911820a79543671c3503cb0df8920285bdbee87b5dce1f0c21d",
+      "initial_export_sha256": "eea10f8eab136911820a79543671c3503cb0df8920285bdbee87b5dce1f0c21d",
+      "adaptations": []
+    },
+    {
+      "source": "nskernel/cognition/projection/__init__.py",
+      "target": "nskernel/cognition/projection/__init__.py",
+      "source_sha256": "3771e656e6619b538e61e0ce379d7952327d7b3c246861461dce5ebb5a446d46",
+      "initial_export_sha256": "3771e656e6619b538e61e0ce379d7952327d7b3c246861461dce5ebb5a446d46",
+      "adaptations": []
+    },
+    {
+      "source": "nskernel/cognition/projection/projector.py",
+      "target": "nskernel/cognition/projection/projector.py",
+      "source_sha256": "13fb1f6d355b89fcc35dd663427b9c1437dc083156007cce98a94465ea7dfa2e",
+      "initial_export_sha256": "13fb1f6d355b89fcc35dd663427b9c1437dc083156007cce98a94465ea7dfa2e",
+      "adaptations": []
+    },
+    {
+      "source": "nskernel/computation/__init__.py",
+      "target": "nskernel/computation/__init__.py",
+      "source_sha256": "e64edb6a17a6e97e46d4f5c27f567410ccbd9042868fcd79b9884df98eaa953b",
+      "initial_export_sha256": "e64edb6a17a6e97e46d4f5c27f567410ccbd9042868fcd79b9884df98eaa953b",
+      "adaptations": []
+    },
+    {
+      "source": "nskernel/computation/calculator/__init__.py",
+      "target": "nskernel/computation/calculator/__init__.py",
+      "source_sha256": "141586eb76e0a211452d7aed93a6e430beff76903071ae68844d52aa754acc80",
+      "initial_export_sha256": "141586eb76e0a211452d7aed93a6e430beff76903071ae68844d52aa754acc80",
+      "adaptations": []
+    },
+    {
+      "source": "nskernel/computation/calculator/calculator.py",
+      "target": "nskernel/computation/calculator/calculator.py",
+      "source_sha256": "a70d22caddb3e754dfbbca67af57fc0a69e57f31b7ccb8799a9b7dfce24d99b2",
+      "initial_export_sha256": "a70d22caddb3e754dfbbca67af57fc0a69e57f31b7ccb8799a9b7dfce24d99b2",
+      "adaptations": []
+    },
+    {
+      "source": "nskernel/computation/expression/__init__.py",
+      "target": "nskernel/computation/expression/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "initial_export_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "adaptations": []
+    },
+    {
+      "source": "nskernel/computation/formula/__init__.py",
+      "target": "nskernel/computation/formula/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "initial_export_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "adaptations": []
+    },
+    {
+      "source": "nskernel/computation/unit/__init__.py",
+      "target": "nskernel/computation/unit/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "initial_export_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "adaptations": []
+    },
+    {
+      "source": "nskernel/contracts/__init__.py",
+      "target": "nskernel/contracts/__init__.py",
+      "source_sha256": "329a462faa3468175bf0268f326c6e9e96cf7ffecc822c1e87a15324e4d58039",
+      "initial_export_sha256": "329a462faa3468175bf0268f326c6e9e96cf7ffecc822c1e87a15324e4d58039",
+      "adaptations": []
+    },
+    {
+      "source": "nskernel/contracts/agent_signal_protocol.py",
+      "target": "nskernel/contracts/agent_signal_protocol.py",
+      "source_sha256": "670852cea1ce73157d08e6e5b0361a7776d2edb479704db779ac9e6207b7ca00",
+      "initial_export_sha256": "670852cea1ce73157d08e6e5b0361a7776d2edb479704db779ac9e6207b7ca00",
+      "adaptations": []
+    },
+    {
+      "source": "nskernel/contracts/authority_schema.py",
+      "target": "nskernel/contracts/authority_schema.py",
+      "source_sha256": "dce555a222169f868b69cf1e063b578acf1739ab69460975bacdbd4c76399f8a",
+      "initial_export_sha256": "dce555a222169f868b69cf1e063b578acf1739ab69460975bacdbd4c76399f8a",
+      "adaptations": []
+    },
+    {
+      "source": "nskernel/contracts/causal_chain_schema.py",
+      "target": "nskernel/contracts/causal_chain_schema.py",
+      "source_sha256": "2da541c19dfb6143976a24ca95f47effb71e7b7f6d4af8532120993fb9702d05",
+      "initial_export_sha256": "2da541c19dfb6143976a24ca95f47effb71e7b7f6d4af8532120993fb9702d05",
+      "adaptations": []
+    },
+    {
+      "source": "nskernel/contracts/computation_spec.py",
+      "target": "nskernel/contracts/computation_spec.py",
+      "source_sha256": "4dc89c4a9f698954ae809e25b52464ca7ead0269aeb919e52b571ef6a55f9ba3",
+      "initial_export_sha256": "4dc89c4a9f698954ae809e25b52464ca7ead0269aeb919e52b571ef6a55f9ba3",
+      "adaptations": []
+    },
+    {
+      "source": "nskernel/contracts/decision_schema.py",
+      "target": "nskernel/contracts/decision_schema.py",
+      "source_sha256": "c399c32bf4644c9c1a915027479dbc91d2695bbefb6c362f5de448f75e19ca00",
+      "initial_export_sha256": "c399c32bf4644c9c1a915027479dbc91d2695bbefb6c362f5de448f75e19ca00",
+      "adaptations": []
+    },
+    {
+      "source": "nskernel/contracts/domain_profile.py",
+      "target": "nskernel/contracts/domain_profile.py",
+      "source_sha256": "7fa800dd95f4d11293e2110b9ea2e0c8bd6652e0c1f40b511dca4b7bfa000593",
+      "initial_export_sha256": "7fa800dd95f4d11293e2110b9ea2e0c8bd6652e0c1f40b511dca4b7bfa000593",
+      "adaptations": []
+    },
+    {
+      "source": "nskernel/contracts/entity_scheme.py",
+      "target": "nskernel/contracts/entity_scheme.py",
+      "source_sha256": "6006f2af9d49de50409049340b5f5da7802f97a2009af88b77f038d645e4dd2b",
+      "initial_export_sha256": "6006f2af9d49de50409049340b5f5da7802f97a2009af88b77f038d645e4dd2b",
+      "adaptations": []
+    },
+    {
+      "source": "nskernel/contracts/environment_matrix_schema.py",
+      "target": "nskernel/contracts/environment_matrix_schema.py",
+      "source_sha256": "d7f044f017e20af7d55e81f03839449a4c8830a770040a79a5eb1eb7703b6b98",
+      "initial_export_sha256": "d7f044f017e20af7d55e81f03839449a4c8830a770040a79a5eb1eb7703b6b98",
+      "adaptations": []
+    },
+    {
+      "source": "nskernel/contracts/observation_schema.py",
+      "target": "nskernel/contracts/observation_schema.py",
+      "source_sha256": "49b3a064b5a9c5c75614e27b84d7352b37151be30b08791e5076ff893c61c631",
+      "initial_export_sha256": "49b3a064b5a9c5c75614e27b84d7352b37151be30b08791e5076ff893c61c631",
+      "adaptations": []
+    },
+    {
+      "source": "nskernel/dialogue/__init__.py",
+      "target": "nskernel/dialogue/__init__.py",
+      "source_sha256": "72b6f432fcd311b7f17e891a3416a46f55d329c9e5f15e30b64f05d9bd2b4bfe",
+      "initial_export_sha256": "72b6f432fcd311b7f17e891a3416a46f55d329c9e5f15e30b64f05d9bd2b4bfe",
+      "adaptations": []
+    },
+    {
+      "source": "nskernel/dialogue/agent/__init__.py",
+      "target": "nskernel/dialogue/agent/__init__.py",
+      "source_sha256": "264d0186020b354bb878dfb408024d0ffbb8dbb821c8f1603621939b0b6a4d70",
+      "initial_export_sha256": "264d0186020b354bb878dfb408024d0ffbb8dbb821c8f1603621939b0b6a4d70",
+      "adaptations": []
+    },
+    {
+      "source": "nskernel/dialogue/agent/base.py",
+      "target": "nskernel/dialogue/agent/base.py",
+      "source_sha256": "881106fdf6ee81ab4b92438ec2b38f2cf52a3d35f1d5a439b454a157a88217cb",
+      "initial_export_sha256": "881106fdf6ee81ab4b92438ec2b38f2cf52a3d35f1d5a439b454a157a88217cb",
+      "adaptations": []
+    },
+    {
+      "source": "nskernel/dialogue/memory/__init__.py",
+      "target": "nskernel/dialogue/memory/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "initial_export_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "adaptations": []
+    },
+    {
+      "source": "nskernel/dialogue/orchestrator/__init__.py",
+      "target": "nskernel/dialogue/orchestrator/__init__.py",
+      "source_sha256": "a2daec7e9bc972a4bf0aeb07dc7da3ba2fc95c25d1ded5c1763e3556b5565b5d",
+      "initial_export_sha256": "a2daec7e9bc972a4bf0aeb07dc7da3ba2fc95c25d1ded5c1763e3556b5565b5d",
+      "adaptations": []
+    },
+    {
+      "source": "nskernel/dialogue/orchestrator/orchestrator.py",
+      "target": "nskernel/dialogue/orchestrator/orchestrator.py",
+      "source_sha256": "325e28a017b787f8cb51104c5698fcc6c98aa690ffc76ee60d5c1d487b2ab936",
+      "initial_export_sha256": "325e28a017b787f8cb51104c5698fcc6c98aa690ffc76ee60d5c1d487b2ab936",
+      "adaptations": []
+    },
+    {
+      "source": "nskernel/dialogue/reasoning/__init__.py",
+      "target": "nskernel/dialogue/reasoning/__init__.py",
+      "source_sha256": "f7587900a3d62c6f3413940e3806635a857941da619ce951f64e5ebd130ab934",
+      "initial_export_sha256": "f7587900a3d62c6f3413940e3806635a857941da619ce951f64e5ebd130ab934",
+      "adaptations": []
+    },
+    {
+      "source": "nskernel/dialogue/reasoning/candidate_and_transition.py",
+      "target": "nskernel/dialogue/reasoning/candidate_and_transition.py",
+      "source_sha256": "530642d57a17640562c887e16cc08e6a6e5db50f1e6a1656ad73edfe8cd7ca0e",
+      "initial_export_sha256": "530642d57a17640562c887e16cc08e6a6e5db50f1e6a1656ad73edfe8cd7ca0e",
+      "adaptations": []
+    },
+    {
+      "source": "nskernel/dialogue/reasoning/decision.py",
+      "target": "nskernel/dialogue/reasoning/decision.py",
+      "source_sha256": "ce57b2120c66f6ce3b3d78cbf97e0ccc8ad575008c1858923a730b5e15623333",
+      "initial_export_sha256": "ce57b2120c66f6ce3b3d78cbf97e0ccc8ad575008c1858923a730b5e15623333",
+      "adaptations": []
+    },
+    {
+      "source": "nskernel/dialogue/reasoning/extended_checkers.py",
+      "target": "nskernel/dialogue/reasoning/extended_checkers.py",
+      "source_sha256": "ff838c44cfbf2ec5cce173f23e375da1076926ecd4ba8416a2564c9491bf295d",
+      "initial_export_sha256": "ff838c44cfbf2ec5cce173f23e375da1076926ecd4ba8416a2564c9491bf295d",
+      "adaptations": []
+    },
+    {
+      "source": "nskernel/dialogue/reasoning/loop_manager.py",
+      "target": "nskernel/dialogue/reasoning/loop_manager.py",
+      "source_sha256": "7d0e659a77c50bb93449af7b04bdeb85e7ddacdea4ae8574589f4a1fc16b02d5",
+      "initial_export_sha256": "7d0e659a77c50bb93449af7b04bdeb85e7ddacdea4ae8574589f4a1fc16b02d5",
+      "adaptations": []
+    },
+    {
+      "source": "nskernel/dialogue/reasoning/residual_state.py",
+      "target": "nskernel/dialogue/reasoning/residual_state.py",
+      "source_sha256": "a8f1887135a0a6ff10df0f2a32d2d797aa2a340c97a3df7316eac8d5bcdec272",
+      "initial_export_sha256": "a8f1887135a0a6ff10df0f2a32d2d797aa2a340c97a3df7316eac8d5bcdec272",
+      "adaptations": []
+    },
+    {
+      "source": "nskernel/dialogue/reasoning/strict_orchestrator.py",
+      "target": "nskernel/dialogue/reasoning/strict_orchestrator.py",
+      "source_sha256": "e34d018f7ba6aa2d575f11712972df19faf63f2c10c30beb486cd84dd925f756",
+      "initial_export_sha256": "e34d018f7ba6aa2d575f11712972df19faf63f2c10c30beb486cd84dd925f756",
+      "adaptations": []
+    },
+    {
+      "source": "nskernel/dialogue/reasoning/verifier_gate.py",
+      "target": "nskernel/dialogue/reasoning/verifier_gate.py",
+      "source_sha256": "1b19b87fc782987a2901af2161c9c7194f543790ec04a854b9e37b826e16235a",
+      "initial_export_sha256": "1b19b87fc782987a2901af2161c9c7194f543790ec04a854b9e37b826e16235a",
+      "adaptations": []
+    },
+    {
+      "source": "nskernel/dialogue/session/__init__.py",
+      "target": "nskernel/dialogue/session/__init__.py",
+      "source_sha256": "8adb9914f8c517f128ae5f31edc702098f67222336f9e3131bafd31c3400e725",
+      "initial_export_sha256": "8adb9914f8c517f128ae5f31edc702098f67222336f9e3131bafd31c3400e725",
+      "adaptations": []
+    },
+    {
+      "source": "nskernel/dialogue/session/session.py",
+      "target": "nskernel/dialogue/session/session.py",
+      "source_sha256": "52e15019f3e817fa17ea9c8ee6467101b5dc30f810e06a97a0e533cc5f23d63a",
+      "initial_export_sha256": "52e15019f3e817fa17ea9c8ee6467101b5dc30f810e06a97a0e533cc5f23d63a",
+      "adaptations": []
+    },
+    {
+      "source": "nskernel/guardrails/__init__.py",
+      "target": "nskernel/guardrails/__init__.py",
+      "source_sha256": "3963a7860d2297b7d960624cc8703f3acaa74f0d0bb2ae18fc02e2b8ad61dfba",
+      "initial_export_sha256": "3963a7860d2297b7d960624cc8703f3acaa74f0d0bb2ae18fc02e2b8ad61dfba",
+      "adaptations": []
+    },
+    {
+      "source": "nskernel/guardrails/prompt_injection.py",
+      "target": "nskernel/guardrails/prompt_injection.py",
+      "source_sha256": "cdb8f782e4513899f2814c458b47343e0f65bd0d257746c3799b9ceeaf155883",
+      "initial_export_sha256": "cdb8f782e4513899f2814c458b47343e0f65bd0d257746c3799b9ceeaf155883",
+      "adaptations": []
+    },
+    {
+      "source": "nskernel/knowledge/__init__.py",
+      "target": "nskernel/knowledge/__init__.py",
+      "source_sha256": "2dde55bb484e551df7ab737e89d56eae1ab62e63ac5ff73fe1e207126902a32d",
+      "initial_export_sha256": "2dde55bb484e551df7ab737e89d56eae1ab62e63ac5ff73fe1e207126902a32d",
+      "adaptations": []
+    },
+    {
+      "source": "nskernel/knowledge/authority_rag/__init__.py",
+      "target": "nskernel/knowledge/authority_rag/__init__.py",
+      "source_sha256": "bd5e72feb6b9d2c947491e8d8d8baad2133b2e2d3c056c4fdefb8d82beebbfd6",
+      "initial_export_sha256": "bd5e72feb6b9d2c947491e8d8d8baad2133b2e2d3c056c4fdefb8d82beebbfd6",
+      "adaptations": []
+    },
+    {
+      "source": "nskernel/knowledge/authority_rag/base.py",
+      "target": "nskernel/knowledge/authority_rag/base.py",
+      "source_sha256": "78bf1ade8c08317934fa8776505080a78a7c8c44a8fa7877fea78dac7488d658",
+      "initial_export_sha256": "78bf1ade8c08317934fa8776505080a78a7c8c44a8fa7877fea78dac7488d658",
+      "adaptations": []
+    },
+    {
+      "source": "nskernel/knowledge/distillation/__init__.py",
+      "target": "nskernel/knowledge/distillation/__init__.py",
+      "source_sha256": "c334560e19185f8f498116a5670077bc21186825eb3b22de0700864c9fbb3638",
+      "initial_export_sha256": "c334560e19185f8f498116a5670077bc21186825eb3b22de0700864c9fbb3638",
+      "adaptations": []
+    },
+    {
+      "source": "nskernel/knowledge/distillation/distiller.py",
+      "target": "nskernel/knowledge/distillation/distiller.py",
+      "source_sha256": "bd58c49a03876499680edf4320ccd74b19e1f01b4d20429360de91768e0b5f9e",
+      "initial_export_sha256": "bd58c49a03876499680edf4320ccd74b19e1f01b4d20429360de91768e0b5f9e",
+      "adaptations": []
+    },
+    {
+      "source": "nskernel/knowledge/graph/__init__.py",
+      "target": "nskernel/knowledge/graph/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "initial_export_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "adaptations": []
+    },
+    {
+      "source": "nskernel/knowledge/ontology/__init__.py",
+      "target": "nskernel/knowledge/ontology/__init__.py",
+      "source_sha256": "887bfbf6dcb282dda8acbe70e7dcb53ad93232bb25353e518e241e801359ffc5",
+      "initial_export_sha256": "887bfbf6dcb282dda8acbe70e7dcb53ad93232bb25353e518e241e801359ffc5",
+      "adaptations": []
+    },
+    {
+      "source": "nskernel/knowledge/ontology/base.py",
+      "target": "nskernel/knowledge/ontology/base.py",
+      "source_sha256": "10621d80454d74262ede84710b85df17ebf59feddc4129c39339abd70e13c25f",
+      "initial_export_sha256": "10621d80454d74262ede84710b85df17ebf59feddc4129c39339abd70e13c25f",
+      "adaptations": []
+    },
+    {
+      "source": "nskernel/llm/__init__.py",
+      "target": "nskernel/llm/__init__.py",
+      "source_sha256": "3e8a62c1ca24d221cc6a955cab437831a81298df9e39c0f55b068384ba8a96a4",
+      "initial_export_sha256": "3e8a62c1ca24d221cc6a955cab437831a81298df9e39c0f55b068384ba8a96a4",
+      "adaptations": []
+    },
+    {
+      "source": "nskernel/llm/client/__init__.py",
+      "target": "nskernel/llm/client/__init__.py",
+      "source_sha256": "dd9502297aaa648311365cd42edbe7ac5af3c57f35de1da4666909fd679eb698",
+      "initial_export_sha256": "dd9502297aaa648311365cd42edbe7ac5af3c57f35de1da4666909fd679eb698",
+      "adaptations": []
+    },
+    {
+      "source": "nskernel/llm/client/base.py",
+      "target": "nskernel/llm/client/base.py",
+      "source_sha256": "b67181bb7fe3fb1b562314845f66b2c36b5787d71fd41071166f94eafec76da0",
+      "initial_export_sha256": "b67181bb7fe3fb1b562314845f66b2c36b5787d71fd41071166f94eafec76da0",
+      "adaptations": []
+    },
+    {
+      "source": "nskernel/llm/providers/__init__.py",
+      "target": "nskernel/llm/providers/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "initial_export_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "adaptations": []
+    },
+    {
+      "source": "nskernel/llm/spec/__init__.py",
+      "target": "nskernel/llm/spec/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "initial_export_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "adaptations": []
+    },
+    {
+      "source": "nskernel/monitor/__init__.py",
+      "target": "nskernel/monitor/__init__.py",
+      "source_sha256": "3b97159a7592b0c1130317b488aac04a1eece1929baa7b456778250a0e034121",
+      "initial_export_sha256": "3b97159a7592b0c1130317b488aac04a1eece1929baa7b456778250a0e034121",
+      "adaptations": []
+    },
+    {
+      "source": "nskernel/monitor/monitor.py",
+      "target": "nskernel/monitor/monitor.py",
+      "source_sha256": "29d2ba1b4ee02092caafe2784726daf8733a050d3524fa12ffb689ed5cc2a0d6",
+      "initial_export_sha256": "29d2ba1b4ee02092caafe2784726daf8733a050d3524fa12ffb689ed5cc2a0d6",
+      "adaptations": []
+    },
+    {
+      "source": "nskernel/reasoning/__init__.py",
+      "target": "nskernel/reasoning/__init__.py",
+      "source_sha256": "4738a9d1a0367931ef6c3d62ca418be4e49945c8f934216fbbf54e27fef5a369",
+      "initial_export_sha256": "4738a9d1a0367931ef6c3d62ca418be4e49945c8f934216fbbf54e27fef5a369",
+      "adaptations": []
+    },
+    {
+      "source": "nskernel/reasoning/controller/__init__.py",
+      "target": "nskernel/reasoning/controller/__init__.py",
+      "source_sha256": "e5c7e2e4f40bc29db35b92ba0acd29b56268aa5f00cb08acba4f3c38cf637324",
+      "initial_export_sha256": "e5c7e2e4f40bc29db35b92ba0acd29b56268aa5f00cb08acba4f3c38cf637324",
+      "adaptations": []
+    },
+    {
+      "source": "nskernel/reasoning/controller/controllers.py",
+      "target": "nskernel/reasoning/controller/controllers.py",
+      "source_sha256": "f189f41843e72fa138ff3fd2447f28d1539dd72c8dca0d1ac0e3bb23805ccd45",
+      "initial_export_sha256": "f189f41843e72fa138ff3fd2447f28d1539dd72c8dca0d1ac0e3bb23805ccd45",
+      "adaptations": []
+    },
+    {
+      "source": "nskernel/reasoning/controller/runtime_controller.py",
+      "target": "nskernel/reasoning/controller/runtime_controller.py",
+      "source_sha256": "6e0a39536f0f74aeecbcf5128c034ed7592a8387bd869f52f4e2659349276cc2",
+      "initial_export_sha256": "6e0a39536f0f74aeecbcf5128c034ed7592a8387bd869f52f4e2659349276cc2",
+      "adaptations": []
+    },
+    {
+      "source": "nskernel/reasoning/proposal/__init__.py",
+      "target": "nskernel/reasoning/proposal/__init__.py",
+      "source_sha256": "d5aa4ccca1bff19aae7bc8a7d0883828ea39e8f6d596a4bf80207cdd6801d2e2",
+      "initial_export_sha256": "d5aa4ccca1bff19aae7bc8a7d0883828ea39e8f6d596a4bf80207cdd6801d2e2",
+      "adaptations": []
+    },
+    {
+      "source": "nskernel/reasoning/proposal/proposers.py",
+      "target": "nskernel/reasoning/proposal/proposers.py",
+      "source_sha256": "1fc639e9fadca94eef1c0b3b1766b2359de932b8b75195ae2788902647a5ddc6",
+      "initial_export_sha256": "1fc639e9fadca94eef1c0b3b1766b2359de932b8b75195ae2788902647a5ddc6",
+      "adaptations": []
+    },
+    {
+      "source": "nskernel/retrieval/__init__.py",
+      "target": "nskernel/retrieval/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "initial_export_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "adaptations": []
+    },
+    {
+      "source": "nskernel/trace/__init__.py",
+      "target": "nskernel/trace/__init__.py",
+      "source_sha256": "d1701d65c91cd91cfd6bf1d48941226abec8f087f901829476e6fcf875fcd74e",
+      "initial_export_sha256": "d1701d65c91cd91cfd6bf1d48941226abec8f087f901829476e6fcf875fcd74e",
+      "adaptations": []
+    },
+    {
+      "source": "nskernel/trace/tracer.py",
+      "target": "nskernel/trace/tracer.py",
+      "source_sha256": "4b4c23ca8baacb9bb064501f505905c6f4faef7a003b22b76a663ffb85ea1a16",
+      "initial_export_sha256": "4b4c23ca8baacb9bb064501f505905c6f4faef7a003b22b76a663ffb85ea1a16",
+      "adaptations": []
+    },
+    {
+      "source": "nskernel/verification/__init__.py",
+      "target": "nskernel/verification/__init__.py",
+      "source_sha256": "045288088deb105bbf7ddac029912827ab51e1d8a90e84764724ebd4d7c4ba36",
+      "initial_export_sha256": "045288088deb105bbf7ddac029912827ab51e1d8a90e84764724ebd4d7c4ba36",
+      "adaptations": []
+    },
+    {
+      "source": "nskernel/verification/claim_verifier/__init__.py",
+      "target": "nskernel/verification/claim_verifier/__init__.py",
+      "source_sha256": "e1e78963a4bde7109b1be902ce78a59901218f17675e8d3eadbbab3bae42e9ac",
+      "initial_export_sha256": "e1e78963a4bde7109b1be902ce78a59901218f17675e8d3eadbbab3bae42e9ac",
+      "adaptations": []
+    },
+    {
+      "source": "nskernel/verification/claim_verifier/verifier.py",
+      "target": "nskernel/verification/claim_verifier/verifier.py",
+      "source_sha256": "f0e7e1d9236b7afb0ce51bc3798d43b04f7c8ca0c1a887efd9424224ad210d3c",
+      "initial_export_sha256": "f0e7e1d9236b7afb0ce51bc3798d43b04f7c8ca0c1a887efd9424224ad210d3c",
+      "adaptations": []
+    },
+    {
+      "source": "nskernel/verification/hallucination_guard/__init__.py",
+      "target": "nskernel/verification/hallucination_guard/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "initial_export_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "adaptations": []
+    },
+    {
+      "source": "nskernel/verification/numeric_claims.py",
+      "target": "nskernel/verification/numeric_claims.py",
+      "source_sha256": "7b822138d6bd3b7b47be05bd952b90be5fa2b0ebfd5b424aaf643f4b4ba9c01c",
+      "initial_export_sha256": "7b822138d6bd3b7b47be05bd952b90be5fa2b0ebfd5b424aaf643f4b4ba9c01c",
+      "adaptations": []
+    }
+  ]
+}
