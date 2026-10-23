@@ -1,4 +1,5 @@
-include LICENSE NOTICE README.md SECURITY.md CONTRIBUTING.md
+include LICENSE NOTICE README.md README.zh-CN.md SECURITY.md CONTRIBUTING.md
+include docs/assets/hero.png docs/assets/execution-contract.svg docs/assets/residual-intake.svg
 recursive-include docs *.md *.json
 recursive-include tests *.py
 recursive-include tools *.py

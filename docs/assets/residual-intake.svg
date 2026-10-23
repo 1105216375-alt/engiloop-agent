@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1030" viewBox="0 0 1400 1030" role="img" aria-labelledby="title desc">
+  <title id="title">Ask for what is missing. Never invent the measurement.</title>
+  <desc id="desc">Synthetic bridge-maintenance intake example, translated from the runnable Chinese example. A worker reports exposed rebar on the underside of T-girder 1-1, six metres from abutment zero at the right edge, but gives imprecise palm and finger dimensions. The residual keeps measured length and width missing and asks for explicit measurements. The worker reports ruler readings of one point five metres by ten centimetres. Symbolic normalization records length_m 1.5 and width_m 0.10, retaining user-reported measurement status. Component identity, position, photographs and original measurement evidence still require review. The record is not eligible for scoring. This is an intake adapter, not a demonstration of the full execution controller.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#071320"/><stop offset="1" stop-color="#0B1C2B"/></linearGradient>
+    <linearGradient id="edge" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#35D8D0"/><stop offset="1" stop-color="#6EA8FE"/></linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M1 1 L8 5 L1 9" fill="none" stroke="#6EA8FE" stroke-width="1.6" stroke-linejoin="round"/></marker>
+    <style>
+      text{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;fill:#EFF6FD}
+      .eyebrow{font-size:19px;font-weight:600;letter-spacing:3px;fill:#35D8D0}
+      .heading{font-size:42px;font-weight:700;letter-spacing:-1px}
+      .sub{font-size:24px;fill:#A6BDD1}
+      .label{font-size:19px;font-weight:600;letter-spacing:1.8px}
+      .panel-title{font-size:31px;font-weight:650;letter-spacing:-.4px}
+      .body{font-size:25px;fill:#C3D4E2}
+      .small{font-size:21px;fill:#9AB3C7}
+      .cyan{fill:#35D8D0}.blue{fill:#8AB9FF}.amber{fill:#E7BD78}
+      .mono{font-family:"SFMono-Regular",Consolas,"Liberation Mono",monospace;font-size:25px}
+      .panel{fill:#0D2133;stroke:#233C51;stroke-width:1.4}
+    </style>
+  </defs>
+  <rect width="1400" height="1030" rx="24" fill="url(#bg)"/>
+  <path d="M50 0 H1350" stroke="url(#edge)" stroke-width="4"/>
+  <text x="50" y="56" class="eyebrow">ENGINEERING DOMAIN AGENT / RESIDUAL-DRIVEN INTAKE</text>
+  <text x="50" y="117" class="heading">Ask for what is missing.</text>
+  <text x="50" y="168" class="heading">Never invent the measurement.</text>
+  <text x="50" y="213" class="sub">From field language to a reviewable engineering record — one missing condition at a time.</text>
+
+  <!-- Left lane: translated dialogue and explicit, bounded follow-up. -->
+  <rect x="50" y="256" width="690" height="280" rx="18" class="panel"/>
+  <text x="76" y="300" class="label blue">01 / THE WORKER REPORTS</text>
+  <text x="76" y="349" class="body">“T-girder 1-1 has exposed rebar underneath.</text>
+  <text x="76" y="385" class="body">Six metres from abutment 0, at the right edge.</text>
+  <text x="76" y="421" class="body">About a palm long and two fingers wide.”</text>
+  <rect x="76" y="458" width="638" height="50" rx="10" fill="#372B20"/>
+  <text x="96" y="491" font-size="23" font-weight="600" class="amber">A useful description. Not a measured dimension.</text>
+
+  <path d="M740 397 H792" fill="none" stroke="#6EA8FE" stroke-width="2.6" marker-end="url(#arrow)"/>
+  <rect x="806" y="256" width="544" height="280" rx="18" fill="#102938" stroke="#286170" stroke-width="1.4"/>
+  <text x="834" y="300" class="label cyan">02 / ASK FOR MISSING EVIDENCE</text>
+  <text x="834" y="348" class="panel-title">Still missing</text>
+  <circle cx="844" cy="388" r="4" fill="#35D8D0"/>
+  <text x="864" y="396" class="body">Measured length and width</text>
+  <circle cx="844" cy="426" r="4" fill="#E7BD78"/>
+  <text x="864" y="434" class="body">Evidence for later review</text>
+  <text x="834" y="481" font-size="25" font-weight="600">“What are the ruler measurements?”</text>
+  <text x="834" y="514" class="small">Keep known fields; do not invent the rest.</text>
+
+  <path d="M1078 536 V569 H394 V600" fill="none" stroke="#6EA8FE" stroke-width="2.6" marker-end="url(#arrow)"/>
+  <rect x="50" y="614" width="690" height="277" rx="18" class="panel"/>
+  <text x="76" y="658" class="label blue">03 / THE WORKER ADDS A MEASUREMENT</text>
+  <text x="76" y="709" class="body">“I used a ruler: 1.5 metres long,</text>
+  <text x="76" y="745" class="body">ten centimetres wide.”</text>
+  <line x1="76" y1="775" x2="714" y2="775" stroke="#29465A"/>
+  <g stroke="#35D8D0" stroke-width="2" fill="none" transform="translate(78 806)">
+    <rect x="0" y="0" width="114" height="42" rx="3"/>
+    <path d="M14 0 V16 M28 0 V10 M42 0 V16 M56 0 V10 M70 0 V16 M84 0 V10 M98 0 V16"/>
+  </g>
+  <text x="217" y="822" font-size="26" font-weight="650" class="cyan">1.5 m × 10 cm → 1.50 m × 0.10 m</text>
+  <text x="217" y="858" class="small">Unit normalization, not independent verification.</text>
+
+  <path d="M740 752 H792" fill="none" stroke="#6EA8FE" stroke-width="2.6" marker-end="url(#arrow)"/>
+  <rect x="806" y="614" width="544" height="277" rx="18" class="panel"/>
+  <text x="834" y="658" class="label cyan">04 / SYMBOLS, WITH LIMITS</text>
+  <text x="834" y="710" class="mono"><tspan fill="#93AAC0">component_ref:</tspan><tspan fill="#E8F3FD"> "T-girder 1-1"</tspan></text>
+  <text x="834" y="750" class="mono"><tspan fill="#93AAC0">length_m:</tspan><tspan fill="#35D8D0"> 1.50</tspan></text>
+  <text x="1084" y="750" class="mono"><tspan fill="#93AAC0">width_m:</tspan><tspan fill="#35D8D0"> 0.10</tspan></text>
+  <text x="834" y="790" class="mono"><tspan fill="#93AAC0">source:</tspan><tspan fill="#E8F3FD"> user-reported</tspan></text>
+  <rect x="834" y="818" width="488" height="48" rx="9" fill="#372B20"/>
+  <text x="854" y="850" font-size="23" font-weight="600" class="amber">Review required · Not eligible for scoring</text>
+
+  <line x1="50" y1="930" x2="1350" y2="930" stroke="#294052"/>
+  <text x="50" y="966" font-size="24" fill="#BDD0DF">Remaining checks: component / position, original photos and measurement records.</text>
+  <text x="50" y="1004" class="small">Synthetic example, translated from the Chinese demo. Offline intake adapter; not the full execution controller.</text>
+</svg>

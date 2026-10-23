@@ -1,84 +1,53 @@
+[English](README.md) · [简体中文](README.zh-CN.md)
+
+![Engineering Domain Agent — a conceptual illustration of neuro-symbolic engineering.](docs/assets/hero.png)
+
 # Engineering Domain Agent
 
-## 工程垂域智能体：让验证参与执行
+### Make verification part of execution.
 
-**模型理解与提出候选，符号系统执行与约束，证据决定结论可以走多远。**
+[![Synthetic mechanism tests](https://github.com/1105216375-alt/engineering-domain-agent/actions/workflows/tests.yml/badge.svg)](https://github.com/1105216375-alt/engineering-domain-agent/actions/workflows/tests.yml) [![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE) [![Python: 3.10+](https://img.shields.io/badge/Python-3.10%2B-3776AB.svg)](pyproject.toml)
 
-从“桥梁医生”的工程应用代码中抽取的神经—符号机制，按 **Apache-2.0** 开放。这里不仅公开组合思路，也提供实际内核、桥梁领域适配、合成案例和能改变最终结果的反例测试。
+**Models propose. Symbolic mechanisms constrain execution. Evidence limits what can be concluded.**
 
-Engineering-domain neuro-symbolic execution extracted from a bridge diagnostic application: structured intake, residual reasoning, reverse evidence verification, governed memory, bounded computation, and checkpoint recovery. Offline synthetic examples are reproducible without model credentials or private archives.
+A neuro-symbolic reference implementation extracted from a bridge-inspection agent: structured intake, residual-driven reasoning, reverse evidence verification, governed memory, bounded computation, and checkpoint recovery. It includes the execution kernel, domain adapters, eight offline examples, and counterexample tests that inspect the final result—not just the logs.
 
-> 这是机制级参考实现，不是原生产产品的完整镜像或可直接签发的工程评定服务。真实档案、规范全文、企业数据库、模型账号和产品 UI 不随仓库分发；原实现抽取、新增适配与未实现接口明确区分。见[来源映射](docs/source-map.md)和[发布边界](docs/release-boundaries.md)。
+[Quick start](#quick-start) · [Architecture](docs/architecture.en.md) · [Runnable mechanisms](#eight-mechanisms-you-can-run) · [Security](SECURITY.md) · [Contributing](CONTRIBUTING.md)
 
-### 核心不是多加一个模型，而是改变采信路径
+> **Release scope:** reusable mechanisms, not a complete production application or a certified engineering assessment service. Private archives, standards corpora, corporate databases, model credentials, and the product UI are excluded. Extracted code, public adaptations, and extension points are distinguished in the [source map](docs/source-map.md) and [release boundaries](docs/release-boundaries.md) (Chinese).
 
-模型输出不直接成为工程事实；检索命中不直接成为适用依据；记忆命中不直接成为本轮证据；计算成功也不自动意味着可以发布结论。
+## Intelligence needs an execution contract
 
-```mermaid
-flowchart TD
-    A[养护描述 / 检测报告] --> B[语义与表格解析\n字段、约束、原文来源]
-    B --> C[残差状态\n目标、事实候选、未知、待补条件]
-    M[审核后的过程记忆] -. 提供候选顺序，不提供旧桥事实 .-> D
-    C --> D[规则 / 工具 / 检索 / 模型\n提出候选步骤]
-    D --> E{验证闸门}
-    E -->|接受| F[受控状态更新与确定性计算]
-    E -->|拒绝 / 暂缓| C
-    E -->|中断| R[中断本步 / 记录升级建议]
-    F --> G{状态不变量检查}
-    G -->|失败| H[回退受覆盖的内存状态]
-    H --> C
-    G -->|通过| I[候选答复]
-    I --> J[反向核验\n对象、数字、数量与条款]
-    J --> K[可交付文本 / 待复核提示 / 扣留]
-    F -. 执行记录 .-> L[检查点、审计与原生 Trace]
-```
+An engineering agent must do more than produce a convincing answer. It must preserve the distinction between a suggestion, a calculation, an observation, and an authorized conclusion.
 
-这是职责图，不表示每个请求都会执行全部模块。当前内核先收集各 proposer 的候选，再逐个校验；**不是**按此图实现“前面的工具失败后才调用模型”的省 token 调度器。执行顺序、回滚范围与对外副作用见[组合说明](docs/architecture.md)。
+This repository makes that distinction operational:
 
-### 可以亲自运行的机制
+- A model response is a **candidate**, not an engineering fact.
+- A retrieved passage is a **possible source**, not proof of applicability.
+- A remembered procedure can suggest a **route**, not supply facts about a new asset.
+- A successful calculation is an **intermediate result**, not automatic permission to issue a report.
 
-| 机制 | 可观察的行为 | 演示 |
+![Execution contract: candidate-producing mechanisms feed a verifier gate; accepted steps update controlled state, and covered output claims are checked against current evidence.](docs/assets/execution-contract.svg)
+
+*The diagram shows responsibilities and control boundaries, not a promise that every request runs every module. The current kernel collects proposer candidates before checking them; it is not a lazy “call the model only if cheaper tools fail” scheduler.*
+
+| Responsibility | What it contributes | Boundary |
 |---|---|---|
-| 神经—符号输入 | 口语、否定、任务约束进入结构；“一巴掌”不冒充量测，补充长度宽度后归一单位 | `examples.semantic_intake` |
-| 报告进入符号结构 | DOCX 支持表格 → 病害记录 + 文档哈希、表/行/列和原文 | `examples.report_intake` |
-| 残差推理 | 撤去评分/承载/维修证据，最终答复受限；无寿命模型时保留缺口 | `examples.residual_reasoning` |
-| RAG 反向核验与图谱 | 错构件数值、不存在的条款被删除或扣留；不相关条款产生复核警告 | `examples.reverse_verification` |
-| 受审核记忆 | 未批准不可用；批准后实际调整后续候选顺序，不复制来源桥的数值与病害 | `examples.reviewed_memory` |
-| 工具计算进入结果 | 合成 DP 20→60，实际构件分 80→40，指定范围分随之变化；报告原值保留 | `examples.engineering_scoring` |
-| 校验、回退、检查点 | 拒绝不提交；故障注入触发状态回退；SQLite 检查点、审批、整任务重试 | `examples.checkpoints_and_rollback` |
-| 原生执行轨迹 | 实际工具调用边界生成 OTLP JSON；没有模型调用就不伪造模型 span | `examples.native_trace` |
+| **Model / semantic layer** | Interpret language, suggest fields and actions, organize a response | Cannot turn missing measurements into facts or grant itself execution authority |
+| **Symbolic layer** | Explicit objects, units, constraints, formulas, state, and provenance | A well-formed field does not establish a real-world fact |
+| **Verification layer** | Check implemented object, number, citation, scope, and state conditions | Agreement from another model is not a substitute for evidence |
+| **Residual control** | Keep unmet requirements visible; guide the next question or bounded answer | Unknowns remain unknown until the relevant evidence is supplied |
+| **Governed memory** | Reuse approved process patterns to influence candidate order | Current evidence and the current verifier still apply |
 
-公开版计算器使用[有界 AST 解释器](docs/safe-arithmetic.md)，不对用户表达式执行 Python `eval`。注册的 Python callable 仍是可信应用代码，并非操作系统沙箱。
+Read the [English architecture guide](docs/architecture.en.md) for actual execution order, interruption behavior, rollback scope, and external side effects.
 
-### 快速开始
+## From field language to a checkable record
 
-Python 3.10+。以下示例默认离线；安装依赖需要常规包源访问。Windows 激活虚拟环境使用 `.venv\Scripts\Activate.ps1`。
+“About a palm long” is useful context. It is not a measurement. The intake example tracks what is missing, asks for the missing information, and normalizes supplied measurements without pretending that the site condition has been independently confirmed.
 
-```bash
-python -m venv .venv
-source .venv/bin/activate
-python -m pip install -e '.[dev]'
-python -m pytest
-python -m examples.all_mechanisms
-```
+![Synthetic residual-driven intake: a worker describes exposed reinforcement, the system requests missing measurements, and supplied dimensions become a structured record with verification gaps preserved.](docs/assets/residual-intake.svg)
 
-也可以单独执行：
-
-```bash
-python -m examples.semantic_intake
-python -m examples.report_intake
-python -m examples.residual_reasoning
-python -m examples.reverse_verification
-python -m examples.reviewed_memory
-python -m examples.engineering_scoring
-python -m examples.checkpoints_and_rollback
-python -m examples.native_trace
-python tools/check_release.py
-```
-
-`all_mechanisms` 是多个有独立合成夹具的机制验收集合，**不是**一份真实桥梁档案贯通所有业务的录像。`native_trace` 则演示实际输入解析、检索和输出核验的调用链。案例不发送数据给任何模型服务。
-
-最小输入示例：
+*Synthetic example, not a product screenshot. The runnable intake example uses a rule-based Chinese parser; the English labels explain its behavior. Unit normalization does not verify component identity or photographic evidence.*
 
 ```python
 from engineering_agent.nlp import MeasurementIntakeSession
@@ -87,36 +56,97 @@ session = MeasurementIntakeSession()
 session.ingest("1-1号T梁梁底有一处锈胀露筋。")
 session.ingest("距0号台6米、距右侧0米，一巴掌长、两指宽。")
 record = session.ingest("尺子量过：长1.5米，宽十厘米。")
+
 print(record["symbol"])
 print(record["residual"]["verification_gaps"])
-# 尺寸归一化不等于现场事实确证；仍保留身份、照片等复核条件。
+# Measurements are normalized; identity/photo review conditions remain.
 ```
 
-离线示例使用规则解析，不冒充 LLM 调用。若接入模型，通过 `compile_intake(..., llm_call=你的显式适配器)` 注入；输出继续经过结构与约束校验。模型费用、数据授权和网络服务安全由接入方管理。
+These inputs describe reinforcement exposure on a T-girder, then supply location and an informal size estimate, and finally a measured length of 1.5 m and width of 10 cm. The parser does not convert the informal estimate into an exact number.
 
-### 阅读路线
+An LLM can be connected explicitly with `compile_intake(..., llm_call=your_adapter)`. Its output still passes through structure and constraint checks. The offline examples do not make model calls or require API keys. Provider costs, data-transfer authorization, and service security belong to the integrating application.
 
-1. [技术组合与执行顺序](docs/architecture.md)：模型、符号、验证、残差与副作用边界。
-2. [神经—符号转换](docs/neural-symbolic.md)：口语追问、否定与报告来源定位。
-3. [反向 RAG](docs/reverse-rag.md)：先生成候选，再反查其可验证主张。
-4. [残差与记忆](docs/residual-and-memory.md)：当前证据如何限制结论、历史过程如何复用。
-5. [评分与原值治理](docs/scoring-and-provenance.md)：计算数据流，不强行调分。
-6. [回退与恢复](docs/checkpoints-and-recovery.md)：拒绝、回滚、持久化、重试并非同义词。
-7. [原生执行轨迹](docs/native-trace.md)：真实工具链、显式目录、异常记录、持久输出与脱敏。
-8. [来源映射](docs/source-map.md)、[本次公开改动](docs/public-adaptations.md)、[安全边界](SECURITY.md)。
+## Eight mechanisms you can run
 
-### 迁移到其他工程垂域
+| Mechanism | Observable behavior | Example module |
+|---|---|---|
+| **Neuro-symbolic intake** | Preserve negation and task constraints; distinguish estimates from measurements; normalize supplied units | [`semantic_intake`](examples/semantic_intake.py) |
+| **Report-to-structure parsing** | Supported DOCX tables become defect records with document hash, table/row/column, and source text | [`report_intake`](examples/report_intake.py) |
+| **Residual reasoning** | Removing scoring, load-test, or maintenance evidence restricts the answer; no calibrated life model means no invented remaining-life estimate | [`residual_reasoning`](examples/residual_reasoning.py) |
+| **Reverse RAG + graph retrieval** | Wrong-object numbers and nonexistent citations are removed or withheld; irrelevant citations receive review warnings | [`reverse_verification`](examples/reverse_verification.py) |
+| **Governed process memory** | Unapproved patterns cannot be used; approval changes subsequent candidate order without copying another bridge's facts | [`reviewed_memory`](examples/reviewed_memory.py) |
+| **Tool results in calculations** | Synthetic deduction input 20 → 60 changes the component score 80 → 40 and the selected-scope result; reported values remain separate | [`engineering_scoring`](examples/engineering_scoring.py) |
+| **Validation + recovery** | Rejected steps do not commit; injected faults trigger covered state rollback; SQLite checkpoints support approvals and whole-task retries | [`checkpoints_and_rollback`](examples/checkpoints_and_rollback.py) |
+| **Native execution traces** | Real tool-call boundaries produce OTLP JSON; absent model calls do not become fabricated model spans | [`native_trace`](examples/native_trace.py) |
 
-可复用的是“结构化输入 → 显式缺口 → 候选 → 校验 → 状态更新 → 输出核验”的机制。需替换领域词表、证据类型、规则/公式、适用性条件和审批边界。道路、设备巡检等可据此接入；法律或数学还需各自的权威依据、证明义务及专用验证器。本仓库不声称这些领域已实现，也不包含 Lean 数学实验项目。
+### Reverse verification changes the delivered answer
 
-### 明确不承诺
+Forward retrieval finds candidate evidence. Reverse verification checks covered claims in a proposed answer against the current tool results and the explicitly supplied clause index.
 
-- 不是“零幻觉”、通用定理证明器、世界排名或工程安全认证。
-- 不把技术状况筛查当作承载能力、通行安全、剩余寿命或维修金额结论。公开版没有校准造价模型，保留缺口而不造金额。
-- 低层历史评分聚合器有上游前置条件，**不要直接将它的空输入默认值用于签发**；公共入口只提供受限部件快照演算，正式等级始终不发布。
-- 检查点读取不等于精确断点续跑；内存回滚不会撤销已发送的工单、网络请求或模型费用。
-- 部分通用 checker、蒸馏器与领域契约仅是扩展点。具体清单见来源映射。
+For example, a value belonging to a bearing cannot justify a claim about a main girder merely because that number appears somewhere in the results. A nonexistent clause is removed; an existing but irrelevant clause is flagged for review. Invalid verification results or an empty valid body are withheld instead of falling back to the unverified original text.
 
-### 许可证与贡献
+This is an executable error-control mechanism, **not** a complete proof of arbitrary natural-language reasoning. Soft warnings and hard blocks are intentionally different. The public adapter rejects an empty clause index rather than pretending that full citation verification took place.
 
-[Apache License 2.0](LICENSE)，署名见 [NOTICE](NOTICE)。欢迎采用、修改、商业集成与贡献；不额外设置“禁止某单位使用”等限制。依赖库仍适用各自许可。新增领域适配请同时提交合成正例、反例和证据边界，见 [CONTRIBUTING](CONTRIBUTING.md)。
+## Quick start
+
+Requires **Python 3.10+**. The examples run offline; dependency installation needs package-index access.
+
+```bash
+git clone https://github.com/1105216375-alt/engineering-domain-agent.git
+cd engineering-domain-agent
+python -m venv .venv
+source .venv/bin/activate
+python -m pip install -e '.[dev]'
+python -m pytest
+python -m examples.all_mechanisms
+```
+
+On Windows PowerShell, activate with `.venv\Scripts\Activate.ps1` instead of `source`.
+
+Run an individual mechanism or audit the release:
+
+```bash
+python -m examples.semantic_intake
+python -m examples.reverse_verification
+python -m examples.reviewed_memory
+python -m examples.checkpoints_and_rollback
+python tools/check_release.py
+```
+
+`all_mechanisms` is a collection of independent synthetic acceptance examples, not a single real bridge archive passing through every production workflow. `native_trace` demonstrates an actual intake → retrieval → output-checking call chain. No example sends records to a model service.
+
+## What is reusable
+
+The reusable pattern is **structured input → explicit gaps → candidates → checks → controlled state updates → output verification**.
+
+To adapt it, supply the domain vocabulary, object identities, evidence types, versioned rules and formulas, applicability conditions, and approval boundaries. Then test missing evidence, wrong-object values, incompatible memory, and injected execution failures against the final state and delivered answer.
+
+Road maintenance and equipment inspection are potential adaptations—not completed integrations in this release. Law and mathematics require their own authoritative sources, proof obligations, and dedicated validators. This repository does not include the separate Lean experiments.
+
+## Engineering boundaries
+
+- **No “zero hallucination” or safety-certification claim.** Covered checks do not validate every causal statement or prove real-world conditions.
+- **No automatic engineering sign-off.** Condition screening is not a load-capacity, traffic-safety, remaining-life, or repair-cost conclusion. The public release has no calibrated cost model and keeps that gap explicit.
+- **No hidden score adjustment.** Reported and computed values remain separate. The public scoring entry point only produces bounded component snapshots and never publishes a formal whole-bridge grade. Legacy low-level aggregators have upstream preconditions; their empty-input defaults must not be used for sign-off.
+- **No automatic reversal of external actions.** Internal rollback does not undo a sent work order, network request, or model charge. Reading a checkpoint is not exact mid-step resumption.
+- **No model-cost claim from candidate priority.** Proposers are called to collect candidates before verification. Ordering alone does not establish token savings.
+- **No sandbox or universal proof claim.** The calculator uses a bounded AST interpreter instead of Python `eval`, but registered Python callables remain trusted code. Some checkers, distillation components, and domain contracts are extension points rather than completed capabilities.
+
+## Documentation
+
+| Guide | Language |
+|---|---|
+| [Architecture, execution order, and boundaries](docs/architecture.en.md) | English · [中文](docs/architecture.md) |
+| [Neuro-symbolic conversion](docs/neural-symbolic.md) | Chinese |
+| [Reverse RAG and graph-backed checks](docs/reverse-rag.md) | Chinese |
+| [Residual reasoning and governed memory](docs/residual-and-memory.md) | Chinese |
+| [Scoring and source-value governance](docs/scoring-and-provenance.md) | Chinese |
+| [Checkpoints and recovery](docs/checkpoints-and-recovery.md) | Chinese |
+| [Native execution traces](docs/native-trace.md) | Chinese |
+| [Bounded arithmetic](docs/safe-arithmetic.md) | Chinese |
+| [Source map](docs/source-map.md) · [Public adaptations](docs/public-adaptations.md) · [Release boundaries](docs/release-boundaries.md) | Chinese |
+| [Security](SECURITY.md) · [Contribution guide](CONTRIBUTING.md) | English |
+
+## License
+
+[Apache License 2.0](LICENSE). See [NOTICE](NOTICE) for attribution. Adoption, modification, commercial integration, and contributions are welcome; dependencies retain their own licenses. Please contribute synthetic positive cases, counterexamples, and explicit evidence boundaries alongside new domain adapters.

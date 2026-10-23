@@ -24,8 +24,8 @@
     },
     {
       "path": "MANIFEST.in",
-      "sha256": "74f84d966935f5ea660c1f300386ab4a70904baa98d5ea2cec54cf9452fdb0f7",
-      "bytes": 186
+      "sha256": "e237660d2625be5ac16ddb68d445badcc610c9bc4e22c9484310d9908447cc97",
+      "bytes": 298
     },
     {
       "path": "NOTICE",
@@ -34,8 +34,13 @@
     },
     {
       "path": "README.md",
-      "sha256": "48ad777fe78af39db649f8aa67bfad4f8d15c527d9148196b807efe9aa2036e0",
-      "bytes": 8022
+      "sha256": "10021c69be4cbfe7ab2429ff672acb4b33db943dfa719ccb3569191c27062754",
+      "bytes": 12667
+    },
+    {
+      "path": "README.zh-CN.md",
+      "sha256": "5654a1810cd8a4d811132c250d280d1123f3403c88a00ebb15d4bda1407a210e",
+      "bytes": 8060
     },
     {
       "path": "SECURITY.md",
@@ -118,9 +123,34 @@
       "bytes": 12105
     },
     {
+      "path": "docs/architecture.en.md",
+      "sha256": "1d552d89989a033dd61fb2009098b0625bdb5bcc2a4211d3dcf0014389216624",
+      "bytes": 12447
+    },
+    {
       "path": "docs/architecture.md",
       "sha256": "071321406d596d1604135cd1ae81c8a9ab1feb62f28c1456cf0d83c87955a7e4",
       "bytes": 4562
+    },
+    {
+      "path": "docs/assets/README.md",
+      "sha256": "7700803c610bfd2854f37d9dc6c02d3082ef60e26ecfc5dc41afd41cb17273fd",
+      "bytes": 3153
+    },
+    {
+      "path": "docs/assets/execution-contract.svg",
+      "sha256": "3326b1fda5ce5e3a607aaae1c69760014c1c1148537a742188b480a09f321fec",
+      "bytes": 8158
+    },
+    {
+      "path": "docs/assets/hero.png",
+      "sha256": "b4e2ae17e56d2b088f7f5700a78960de4eecf62d27f8df4f8a2db1fd9e09176e",
+      "bytes": 1926246
+    },
+    {
+      "path": "docs/assets/residual-intake.svg",
+      "sha256": "af9169ae077b80c4ff4c13b31a9f419010c7abb57d40908b1c0639e0cab2bada",
+      "bytes": 6474
     },
     {
       "path": "docs/checkpoints-and-recovery.md",
@@ -769,8 +799,8 @@
     },
     {
       "path": "tests/test_release_audit.py",
-      "sha256": "7f223d2859cb0a70f1907cb8368a807187d7da629d2be90391a01c45b2db2692",
-      "bytes": 1002
+      "sha256": "311d9d47ce28dd8ba11130d13dd3cb38a276d809adcb75819d9b7795757938c3",
+      "bytes": 5253
     },
     {
       "path": "tests/test_release_isolation.py",
@@ -809,8 +839,8 @@
     },
     {
       "path": "tools/check_release.py",
-      "sha256": "4bea416585a5adbfa9eeb14a479d21b7d98e196f483e4b04caa85d8d589130dc",
-      "bytes": 4052
+      "sha256": "5443323ef5259be6046aa3996417f09703b37ce750c66318f3aa66889d0a8373",
+      "bytes": 10262
     }
   ]
 }

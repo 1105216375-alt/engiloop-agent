@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1050" viewBox="0 0 1400 1050" role="img" aria-labelledby="title desc">
+  <title id="title">Make verification part of execution</title>
+  <desc id="desc">A responsibility map for an engineering-domain agent. Models and other sources propose candidates. A verifier checks a candidate before accepted steps update symbolic state and run bounded computation. State invariants can trigger rollback of covered internal state. Residual control retains unmet goals and evidence gaps. Candidate answers undergo reverse evidence checks before evidence-limited delivery. Traces, checkpoints and reviewed process memory support the loop. Candidate collection is eager, not a lazy model-call optimization; internal rollback does not undo external actions.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#071320"/><stop offset="1" stop-color="#0B1C2B"/></linearGradient>
+    <linearGradient id="edge" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#35D8D0"/><stop offset="1" stop-color="#6EA8FE"/></linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M1 1 L8 5 L1 9" fill="none" stroke="#6EA8FE" stroke-width="1.6" stroke-linejoin="round"/></marker>
+    <marker id="loop" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M1 1 L8 5 L1 9" fill="none" stroke="#35D8D0" stroke-width="1.6" stroke-linejoin="round"/></marker>
+    <style>
+      text{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;fill:#EFF6FD}
+      .eyebrow{font-size:19px;font-weight:600;letter-spacing:3px;fill:#35D8D0}
+      .heading{font-size:43px;font-weight:700;letter-spacing:-1px}
+      .sub{font-size:24px;fill:#A6BDD1}
+      .label{font-size:19px;font-weight:600;letter-spacing:1.8px}
+      .panel-title{font-size:29px;font-weight:650;letter-spacing:-.4px}
+      .body{font-size:23px;fill:#B7CADA}
+      .small{font-size:20px;fill:#94ADC2}
+      .cyan{fill:#35D8D0}.blue{fill:#8AB9FF}.amber{fill:#E7BD78}
+      .panel{fill:#0D2133;stroke:#233C51;stroke-width:1.4}
+    </style>
+  </defs>
+  <rect width="1400" height="1050" rx="24" fill="url(#bg)"/>
+  <path d="M50 0 H1350" stroke="url(#edge)" stroke-width="4"/>
+  <g opacity=".18" stroke="#274C63" stroke-width="1">
+    <path d="M1100 45 H1350 M1130 75 H1350 M1160 105 H1350 M1190 135 H1350"/>
+    <path d="M1260 35 V150 M1300 35 V150 M1340 35 V150"/>
+  </g>
+  <text x="50" y="56" class="eyebrow">ENGINEERING DOMAIN AGENT / EXECUTION CONTRACT</text>
+  <text x="50" y="117" class="heading">Make verification part of execution.</text>
+  <text x="50" y="159" class="sub">The model proposes. The symbolic system constrains. Evidence limits the conclusion.</text>
+
+  <!-- Candidate admission and controlled state change. -->
+  <rect x="50" y="210" width="295" height="276" rx="17" class="panel"/>
+  <rect x="50" y="210" width="295" height="5" rx="2" fill="#6EA8FE"/>
+  <text x="72" y="253" class="label blue">01 / PROPOSE</text>
+  <text x="72" y="298" class="panel-title">Model + candidate</text>
+  <text x="72" y="333" class="panel-title">sources</text>
+  <text x="72" y="377" class="body">Interpret and propose.</text>
+  <text x="72" y="412" class="body">Rules, tools and retrieval</text>
+  <text x="72" y="443" class="body">can propose steps too.</text>
+  <path d="M345 345 H382" fill="none" stroke="#6EA8FE" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <rect x="393" y="210" width="295" height="276" rx="17" class="panel"/>
+  <rect x="393" y="210" width="295" height="5" rx="2" fill="#35D8D0"/>
+  <text x="415" y="253" class="label cyan">02 / VALIDATE</text>
+  <text x="415" y="298" class="panel-title">Verification gate</text>
+  <text x="415" y="347" class="body">Check implemented</text>
+  <text x="415" y="378" class="body">evidence, scope and</text>
+  <text x="415" y="409" class="body">state conditions.</text>
+  <text x="415" y="454" class="small cyan">ACCEPT permits the step.</text>
+  <path d="M688 345 H725" fill="none" stroke="#6EA8FE" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <rect x="736" y="210" width="295" height="276" rx="17" class="panel"/>
+  <rect x="736" y="210" width="295" height="5" rx="2" fill="#35D8D0"/>
+  <text x="758" y="253" class="label cyan">03 / EXECUTE</text>
+  <text x="758" y="298" class="panel-title">Symbolic state</text>
+  <text x="758" y="333" class="panel-title">+ computation</text>
+  <text x="758" y="377" class="body">Explicit objects and units.</text>
+  <text x="758" y="412" class="body">Rules, constraints, tools.</text>
+  <text x="758" y="454" class="small cyan">Only accepted steps update.</text>
+  <path d="M1031 345 H1068" fill="none" stroke="#6EA8FE" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <rect x="1079" y="210" width="271" height="276" rx="17" class="panel"/>
+  <rect x="1079" y="210" width="271" height="5" rx="2" fill="#6EA8FE"/>
+  <text x="1101" y="253" class="label blue">04 / CHECK</text>
+  <text x="1101" y="298" class="panel-title">State invariants</text>
+  <text x="1101" y="347" class="body">Validate the updated</text>
+  <text x="1101" y="378" class="body">internal state.</text>
+  <text x="1101" y="423" class="body amber">Failure: revert the</text>
+  <text x="1101" y="454" class="body amber">covered state.</text>
+
+  <!-- A residual is retained control state, not a fabricated answer. -->
+  <path d="M540 486 V532 M1214 486 V571 H197 V497" fill="none" stroke="#35D8D0" stroke-width="2.3" marker-end="url(#loop)"/>
+  <rect x="364" y="518" width="604" height="95" rx="14" fill="#0B2B37" stroke="#245562" stroke-width="1.4"/>
+  <text x="666" y="553" text-anchor="middle" font-size="25" font-weight="650" class="cyan">RESIDUAL CONTROL / NEXT ITERATION</text>
+  <text x="666" y="586" text-anchor="middle" font-size="22" fill="#C5D8E5">Unmet goals · unknowns · remaining evidence gaps</text>
+  <text x="50" y="650" class="small">REJECT / DEFER do not commit the candidate. INTERRUPT ends the current candidate pass.</text>
+
+  <!-- Output verification is a distinct responsibility. -->
+  <text x="50" y="707" class="label blue">BEFORE DELIVERY / CHECK THE CLAIMS AGAIN</text>
+  <rect x="50" y="733" width="387" height="146" rx="15" class="panel"/>
+  <text x="75" y="777" class="panel-title">Candidate answer</text>
+  <text x="75" y="817" class="body">Statements assembled from</text>
+  <text x="75" y="850" class="body">current inputs and tool results.</text>
+  <path d="M437 806 H481" fill="none" stroke="#6EA8FE" stroke-width="2.4" marker-end="url(#arrow)"/>
+  <rect x="494" y="733" width="412" height="146" rx="15" class="panel"/>
+  <text x="519" y="777" class="panel-title">Reverse evidence check</text>
+  <text x="519" y="817" class="body">Trace checkable claims back to</text>
+  <text x="519" y="850" class="body">objects, values and clauses.</text>
+  <path d="M906 806 H950" fill="none" stroke="#6EA8FE" stroke-width="2.4" marker-end="url(#arrow)"/>
+  <rect x="963" y="733" width="387" height="146" rx="15" fill="#0B2B37" stroke="#286170" stroke-width="1.4"/>
+  <text x="988" y="777" font-size="27" font-weight="650">Evidence-limited delivery</text>
+  <text x="988" y="817" class="body">Release, qualify or withhold.</text>
+  <text x="988" y="850" class="body">Unknowns remain visible.</text>
+
+  <line x1="50" y1="916" x2="1350" y2="916" stroke="#294052"/>
+  <text x="50" y="951" font-size="23" fill="#BDD0DF">Execution traces</text>
+  <text x="278" y="951" font-size="23" fill="#35D8D0">/</text>
+  <text x="306" y="951" font-size="23" fill="#BDD0DF">Checkpoints</text>
+  <text x="487" y="951" font-size="23" fill="#35D8D0">/</text>
+  <text x="516" y="951" font-size="23" fill="#BDD0DF">Reviewed process memory — routes, not old project facts</text>
+  <text x="50" y="995" class="small">Responsibility map, not one universal pipeline. Candidate collection is eager, not lazy model-call scheduling.</text>
+  <text x="50" y="1025" class="small">Internal rollback does not undo external actions. Verification covers implemented checks, not every possible claim.</text>
+</svg>
