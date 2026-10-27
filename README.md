@@ -6,7 +6,7 @@
 
 ### Make verification part of execution.
 
-[![Synthetic mechanism tests](https://github.com/1105216375-alt/engineering-domain-agent/actions/workflows/tests.yml/badge.svg)](https://github.com/1105216375-alt/engineering-domain-agent/actions/workflows/tests.yml) [![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE) [![Python: 3.10+](https://img.shields.io/badge/Python-3.10%2B-3776AB.svg)](pyproject.toml)
+[![Synthetic mechanism tests](https://github.com/1105216375-alt/engineering-domain-agent/actions/workflows/tests.yml/badge.svg)](https://github.com/1105216375-alt/engineering-domain-agent/actions/workflows/tests.yml) [![License: AGPL-3.0-only](https://img.shields.io/badge/License-AGPL--3.0--only-blue.svg)](LICENSE) [![Python: 3.10+](https://img.shields.io/badge/Python-3.10%2B-3776AB.svg)](pyproject.toml)
 
 **Models propose. Symbolic mechanisms constrain execution. Evidence limits what can be concluded.**
 
@@ -149,4 +149,6 @@ Road maintenance and equipment inspection are potential adaptations—not comple
 
 ## License
 
-[Apache License 2.0](LICENSE). See [NOTICE](NOTICE) for attribution. Adoption, modification, commercial integration, and contributions are welcome; dependencies retain their own licenses. Please contribute synthetic positive cases, counterexamples, and explicit evidence boundaries alongside new domain adapters.
+The current project is offered under the [GNU Affero General Public License, version 3 only](LICENSE) (AGPL-3.0-only). Commercial use is permitted subject to its terms; if you modify the covered program and users interact with it over a network, section 13 requires an opportunity for those users to obtain the corresponding source. See [NOTICE](NOTICE) for attribution. Dependencies and third-party components retain their own licenses.
+
+Earlier public versions, through commit [`dd539c8`](https://github.com/1105216375-alt/engineering-domain-agent/tree/dd539c86303c47f77a3e4ecbd0082a93b7edb105), were offered under Apache-2.0; that grant remains in effect for those versions. A copy of the [previous license](LICENSES/Apache-2.0.txt) is retained. The license change does not revoke rights already granted under Apache-2.0.

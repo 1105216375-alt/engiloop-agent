@@ -8,7 +8,7 @@ The homepage artwork is an AI-generated conceptual illustration, not a product s
 - `execution-contract.svg`: neural, symbolic, verification, and evidence responsibilities.
 - `residual-intake.svg`: a synthetic language-to-structure example with explicit unresolved evidence.
 
-These project visuals are distributed under the repository's Apache-2.0 license, without third-party company marks or endorsement.
+The project visuals in the current version are offered under AGPL-3.0-only, without third-party company marks or endorsement. Earlier versions through commit `dd539c8` were offered under Apache-2.0; the prior grant for those versions remains effective.
 
 ## Hero generation prompt
 

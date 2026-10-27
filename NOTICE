@@ -1,6 +1,12 @@
 Engineering Domain Agent
 Copyright 2026 1105216375-alt and contributors
 
+The current project is offered under AGPL-3.0-only; see LICENSE.
+Earlier public versions through commit dd539c86303c47f77a3e4ecbd0082a93b7edb105
+were offered under Apache-2.0. The original grants remain effective for those
+versions; see LICENSES/Apache-2.0.txt. Third-party dependencies retain their
+own licenses and notices.
+
 This release contains selected source mechanisms extracted and adapted from
 the author's bridge-inspection agent project, plus new public integration
 adapters and synthetic examples. See docs/source-map.md and

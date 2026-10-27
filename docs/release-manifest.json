@@ -14,33 +14,38 @@
     },
     {
       "path": "CONTRIBUTING.md",
-      "sha256": "d34e585c7d5f4da4748c17e2b9e824a3d1a0af3d1292f4671d482f63c344f017",
-      "bytes": 1080
+      "sha256": "0cbd648ad783c049e3b2cef3ef9fc3c5ae2f86be5b4f32c4b9d1b65b3e700a5d",
+      "bytes": 1156
     },
     {
       "path": "LICENSE",
+      "sha256": "8d56b405468aad11f87ab5763f901e276e08d9646ff5c8481b1762b6b789e9ed",
+      "bytes": 34524
+    },
+    {
+      "path": "LICENSES/Apache-2.0.txt",
       "sha256": "e53028e2e0ac2e31d95f9c66409ba27e0caaff80abe45cc0a0288895ff027dc1",
       "bytes": 11325
     },
     {
       "path": "MANIFEST.in",
-      "sha256": "e237660d2625be5ac16ddb68d445badcc610c9bc4e22c9484310d9908447cc97",
-      "bytes": 298
+      "sha256": "48244d30b76b51f7542a2f38fdbf9a66ee491c39e733374e05842b82e45c2c33",
+      "bytes": 330
     },
     {
       "path": "NOTICE",
-      "sha256": "d5204cb145d096dcdf33c620ae45d7ece31a9cec5f7e81f4add2bcc2641840a2",
-      "bytes": 577
+      "sha256": "01f6e7de9f76063a31ff1f0de776f111a43285461ad81b965aa20531d9579f69",
+      "bytes": 904
     },
     {
       "path": "README.md",
-      "sha256": "10021c69be4cbfe7ab2429ff672acb4b33db943dfa719ccb3569191c27062754",
-      "bytes": 12667
+      "sha256": "2819a8727773218cfd259e6d820a392862d74cf282fcedaa86a662e1493f5923",
+      "bytes": 13187
     },
     {
       "path": "README.zh-CN.md",
-      "sha256": "5654a1810cd8a4d811132c250d280d1123f3403c88a00ebb15d4bda1407a210e",
-      "bytes": 8060
+      "sha256": "ef70fcbd0b54c1db503572f6a75aff33a38f6398b706f214d55ebd7f20f892d7",
+      "bytes": 8443
     },
     {
       "path": "SECURITY.md",
@@ -134,8 +139,8 @@
     },
     {
       "path": "docs/assets/README.md",
-      "sha256": "7700803c610bfd2854f37d9dc6c02d3082ef60e26ecfc5dc41afd41cb17273fd",
-      "bytes": 3153
+      "sha256": "e44bb75f82ddf1f096bb3652dd9a52f1181f185419554188a54d6a9cb069389a",
+      "bytes": 3275
     },
     {
       "path": "docs/assets/execution-contract.svg",
@@ -174,8 +179,8 @@
     },
     {
       "path": "docs/release-boundaries.md",
-      "sha256": "55d80d0c313525aa81e632f703347c99968df219dde4c72ddddecb3e34ec57a0",
-      "bytes": 7962
+      "sha256": "339674ffdcf8663bcad864e10dacd5f804410d6e55e5ac8b9696c110dc496b2f",
+      "bytes": 8240
     },
     {
       "path": "docs/residual-and-memory.md",
@@ -779,8 +784,8 @@
     },
     {
       "path": "pyproject.toml",
-      "sha256": "a417817cc14ce3660827e043e0c113af7b318d7dc8ef1bd0dd45e6810d6b55d3",
-      "bytes": 820
+      "sha256": "dd65c4b7838afac3bebc293413fd6ffb4db2d5d6f93444621332055e1c182b60",
+      "bytes": 850
     },
     {
       "path": "tests/test_checkpoint_rollback.py",
@@ -791,6 +796,11 @@
       "path": "tests/test_engineering_scoring.py",
       "sha256": "05d7c6609857273bdcd4884b8862289ac1f74d5199ab7cd23a6f196974f28a07",
       "bytes": 9023
+    },
+    {
+      "path": "tests/test_license_metadata.py",
+      "sha256": "a8d6e79c463a1e86e9995d9fd0238ee38c6cab2634765e8f3f8fab241ab22819",
+      "bytes": 1437
     },
     {
       "path": "tests/test_native_trace.py",
@@ -839,8 +849,8 @@
     },
     {
       "path": "tools/check_release.py",
-      "sha256": "5443323ef5259be6046aa3996417f09703b37ce750c66318f3aa66889d0a8373",
-      "bytes": 10262
+      "sha256": "e897968a2fa8c5db168e0533bd3c8363f48d3dc932e373eb3f9a9ad7ddf09e3c",
+      "bytes": 10289
     }
   ]
 }

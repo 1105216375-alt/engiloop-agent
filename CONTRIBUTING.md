@@ -1,6 +1,6 @@
 # Contributing
 
-Contributions are provided under Apache-2.0 unless separately agreed. Confirm that you may contribute your code and test data. Do not copy private project records, proprietary standards corpora, employer logos or third-party code without an appropriate license.
+New contributions are provided under AGPL-3.0-only unless separately agreed. Confirm that you may contribute your code and test data. Do not copy private project records, proprietary standards corpora, employer logos or third-party code without an appropriate license. Preserve any applicable third-party license and attribution notices.
 
 Please include:
 

@@ -8,8 +8,8 @@ version = "0.1.0"
 description = "Engineering-domain neuro-symbolic execution, evidence verification and governed memory"
 readme = "README.md"
 requires-python = ">=3.10"
-license = "Apache-2.0"
-license-files = ["LICENSE", "NOTICE"]
+license = "AGPL-3.0-only"
+license-files = ["LICENSE", "NOTICE", "LICENSES/Apache-2.0.txt"]
 authors = [{name = "1105216375-alt"}]
 dependencies = []
 

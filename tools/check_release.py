@@ -20,7 +20,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DIRECTORIES = {'engineering_agent', 'bip_runtime', 'domain', 'nskernel',
                'legacy_v7', 'examples', 'tests', 'docs', 'tools', '.github'}
 ROOT_FILES = {'README.md', 'README.zh-CN.md', 'LICENSE', 'NOTICE', 'SECURITY.md', 'CONTRIBUTING.md',
-              'MANIFEST.in', 'pyproject.toml', '.gitignore'}
+              'MANIFEST.in', 'pyproject.toml', '.gitignore', 'LICENSES/Apache-2.0.txt'}
 VISUAL_FILES = {'docs/assets/hero.png', 'docs/assets/execution-contract.svg',
                 'docs/assets/residual-intake.svg'}
 MAX_VISUAL_BYTES = 10 * 1024 * 1024

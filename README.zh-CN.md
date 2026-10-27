@@ -6,7 +6,7 @@
 
 **模型理解与提出候选，符号系统执行与约束，证据决定结论可以走多远。**
 
-从“桥梁医生”的工程应用代码中抽取的神经—符号机制，按 **Apache-2.0** 开放。这里不仅公开组合思路，也提供实际内核、桥梁领域适配、合成案例和能改变最终结果的反例测试。
+从“桥梁医生”的工程应用代码中抽取的神经—符号机制，当前版本按 **AGPL-3.0-only** 开放。这里不仅公开组合思路，也提供实际内核、桥梁领域适配、合成案例和能改变最终结果的反例测试。
 
 Engineering-domain neuro-symbolic execution extracted from a bridge diagnostic application: structured intake, residual reasoning, reverse evidence verification, governed memory, bounded computation, and checkpoint recovery. Offline synthetic examples are reproducible without model credentials or private archives.
 
@@ -121,4 +121,6 @@ print(record["residual"]["verification_gaps"])
 
 ### 许可证与贡献
 
-[Apache License 2.0](LICENSE)，署名见 [NOTICE](NOTICE)。欢迎采用、修改、商业集成与贡献；不额外设置“禁止某单位使用”等限制。依赖库仍适用各自许可。新增领域适配请同时提交合成正例、反例和证据边界，见 [CONTRIBUTING](CONTRIBUTING.md)。
+当前版本按 [GNU Affero General Public License 第 3 版](LICENSE)（AGPL-3.0-only）提供，署名见 [NOTICE](NOTICE)。协议允许商业使用，但须遵守其条款；修改受许可程序后让用户通过网络交互时，第 13 条要求向这些用户提供获取对应源码的机会。依赖库和第三方组件继续适用各自许可。
+
+此前公开的版本（截至提交 [`dd539c8`](https://github.com/1105216375-alt/engineering-domain-agent/tree/dd539c86303c47f77a3e4ecbd0082a93b7edb105)）按 Apache-2.0 提供，既有授权继续有效；这里保留[旧版许可文本](LICENSES/Apache-2.0.txt)。本次变更不撤销旧版已授予的权利。
