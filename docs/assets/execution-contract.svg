@@ -25,7 +25,7 @@
     <path d="M1100 45 H1350 M1130 75 H1350 M1160 105 H1350 M1190 135 H1350"/>
     <path d="M1260 35 V150 M1300 35 V150 M1340 35 V150"/>
   </g>
-  <text x="50" y="56" class="eyebrow">ENGINEERING DOMAIN AGENT / EXECUTION CONTRACT</text>
+  <text x="50" y="56" class="eyebrow">ENGILOOP / EXECUTION CONTRACT</text>
   <text x="50" y="117" class="heading">Make verification part of execution.</text>
   <text x="50" y="159" class="sub">The model proposes. The symbolic system constrains. Evidence limits the conclusion.</text>
 

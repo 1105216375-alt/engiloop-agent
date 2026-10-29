@@ -1,12 +1,14 @@
 [English](README.md) · [简体中文](README.zh-CN.md)
 
-![Engineering Domain Agent — a conceptual illustration of neuro-symbolic engineering.](docs/assets/hero.png)
+![EngiLoop — a conceptual illustration of neuro-symbolic engineering.](docs/assets/hero-engiloop.png)
 
-# Engineering Domain Agent
+# EngiLoop
+
+### Neuro-Symbolic Agents for Evidence-Grounded Engineering
 
 ### Make verification part of execution.
 
-[![Synthetic mechanism tests](https://github.com/1105216375-alt/engineering-domain-agent/actions/workflows/tests.yml/badge.svg)](https://github.com/1105216375-alt/engineering-domain-agent/actions/workflows/tests.yml) [![License: AGPL-3.0-only](https://img.shields.io/badge/License-AGPL--3.0--only-blue.svg)](LICENSE) [![Python: 3.10+](https://img.shields.io/badge/Python-3.10%2B-3776AB.svg)](pyproject.toml)
+[![Synthetic mechanism tests](https://github.com/1105216375-alt/engiloop-agent/actions/workflows/tests.yml/badge.svg)](https://github.com/1105216375-alt/engiloop-agent/actions/workflows/tests.yml) [![License: AGPL-3.0-only](https://img.shields.io/badge/License-AGPL--3.0--only-blue.svg)](LICENSE) [![Python: 3.10+](https://img.shields.io/badge/Python-3.10%2B-3776AB.svg)](pyproject.toml)
 
 **Models propose. Symbolic mechanisms constrain execution. Evidence limits what can be concluded.**
 
@@ -92,8 +94,8 @@ This is an executable error-control mechanism, **not** a complete proof of arbit
 Requires **Python 3.10+**. The examples run offline; dependency installation needs package-index access.
 
 ```bash
-git clone https://github.com/1105216375-alt/engineering-domain-agent.git
-cd engineering-domain-agent
+git clone https://github.com/1105216375-alt/engiloop-agent.git
+cd engiloop-agent
 python -m venv .venv
 source .venv/bin/activate
 python -m pip install -e '.[dev]'
@@ -102,6 +104,8 @@ python -m examples.all_mechanisms
 ```
 
 On Windows PowerShell, activate with `.venv\Scripts\Activate.ps1` instead of `source`.
+
+The repository is now called EngiLoop (previously Engineering Domain Agent). The Python distribution remains `engineering-domain-agent`, and the import package remains `engineering_agent` for compatibility.
 
 Run an individual mechanism or audit the release:
 
@@ -151,4 +155,4 @@ Road maintenance and equipment inspection are potential adaptations—not comple
 
 The current project is offered under the [GNU Affero General Public License, version 3 only](LICENSE) (AGPL-3.0-only). Commercial use is permitted subject to its terms; if you modify the covered program and users interact with it over a network, section 13 requires an opportunity for those users to obtain the corresponding source. See [NOTICE](NOTICE) for attribution. Dependencies and third-party components retain their own licenses.
 
-Earlier public versions, through commit [`dd539c8`](https://github.com/1105216375-alt/engineering-domain-agent/tree/dd539c86303c47f77a3e4ecbd0082a93b7edb105), were offered under Apache-2.0; that grant remains in effect for those versions. A copy of the [previous license](LICENSES/Apache-2.0.txt) is retained. The license change does not revoke rights already granted under Apache-2.0.
+Earlier public versions, through commit [`dd539c8`](https://github.com/1105216375-alt/engiloop-agent/tree/dd539c86303c47f77a3e4ecbd0082a93b7edb105), were offered under Apache-2.0; that grant remains in effect for those versions. A copy of the [previous license](LICENSES/Apache-2.0.txt) is retained. The license change does not revoke rights already granted under Apache-2.0.

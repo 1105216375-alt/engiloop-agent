@@ -1,6 +1,8 @@
 [English](README.md) · 简体中文
 
-# Engineering Domain Agent
+# EngiLoop
+
+原名 Engineering Domain Agent。Python 分发包名仍为 `engineering-domain-agent`，导入名仍为 `engineering_agent`，以保持兼容。
 
 ## 工程垂域智能体：让验证参与执行
 
@@ -123,4 +125,4 @@ print(record["residual"]["verification_gaps"])
 
 当前版本按 [GNU Affero General Public License 第 3 版](LICENSE)（AGPL-3.0-only）提供，署名见 [NOTICE](NOTICE)。协议允许商业使用，但须遵守其条款；修改受许可程序后让用户通过网络交互时，第 13 条要求向这些用户提供获取对应源码的机会。依赖库和第三方组件继续适用各自许可。
 
-此前公开的版本（截至提交 [`dd539c8`](https://github.com/1105216375-alt/engineering-domain-agent/tree/dd539c86303c47f77a3e4ecbd0082a93b7edb105)）按 Apache-2.0 提供，既有授权继续有效；这里保留[旧版许可文本](LICENSES/Apache-2.0.txt)。本次变更不撤销旧版已授予的权利。
+此前公开的版本（截至提交 [`dd539c8`](https://github.com/1105216375-alt/engiloop-agent/tree/dd539c86303c47f77a3e4ecbd0082a93b7edb105)）按 Apache-2.0 提供，既有授权继续有效；这里保留[旧版许可文本](LICENSES/Apache-2.0.txt)。本次变更不撤销旧版已授予的权利。

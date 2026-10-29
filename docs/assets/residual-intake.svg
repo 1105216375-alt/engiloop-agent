@@ -21,7 +21,7 @@
   </defs>
   <rect width="1400" height="1030" rx="24" fill="url(#bg)"/>
   <path d="M50 0 H1350" stroke="url(#edge)" stroke-width="4"/>
-  <text x="50" y="56" class="eyebrow">ENGINEERING DOMAIN AGENT / RESIDUAL-DRIVEN INTAKE</text>
+  <text x="50" y="56" class="eyebrow">ENGILOOP / RESIDUAL-DRIVEN INTAKE</text>
   <text x="50" y="117" class="heading">Ask for what is missing.</text>
   <text x="50" y="168" class="heading">Never invent the measurement.</text>
   <text x="50" y="213" class="sub">From field language to a reviewable engineering record — one missing condition at a time.</text>

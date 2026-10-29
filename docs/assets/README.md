@@ -5,6 +5,7 @@ The homepage artwork is an AI-generated conceptual illustration, not a product s
 ## Assets
 
 - `hero.png`: generated using the built-in image generation tool; supplied pixels are preserved.
+- `hero-engiloop.png`: generated using the built-in image editing tool from `hero.png`, preserving the conceptual design while changing the title to EngiLoop. The original is retained.
 - `execution-contract.svg`: neural, symbolic, verification, and evidence responsibilities.
 - `residual-intake.svg`: a synthetic language-to-structure example with explicit unresolved evidence.
 
@@ -26,6 +27,10 @@ subtitle: "Make verification part of execution."
 small bottom line: "MODEL PROPOSES  /  SYMBOLS CONSTRAIN  /  EVIDENCE GOVERNS"
 Use only this exact text, no other captions, logos, badges, fake UI or data. Ivory white main title, cool grey subtitle, subtle cyan eyebrow. Crisp readable lettering. Atmospheric yet highly legible. The central engineering sculpture must remain secondary to the title and clearly separated; no overlap with text. No watermark. No company identity, certification claim or performance metric. Opaque background.
 ```
+
+## EngiLoop edit prompt
+
+Replace the large title in `hero.png` with “EngiLoop”; preserve the existing neural network, verification plane, bridge illustration, color palette, subtitle and other text as faithfully as possible. Conceptual artwork, not a system screenshot.
 
 ## Maintenance
 
