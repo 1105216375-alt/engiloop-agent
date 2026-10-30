@@ -4,19 +4,55 @@
 
 # EngiLoop
 
-### Neuro-Symbolic Agents for Evidence-Grounded Engineering
-
-### Make verification part of execution.
+### Verifiable Domain Agents through Neuro-Symbolic Execution
 
 [![Synthetic mechanism tests](https://github.com/1105216375-alt/engiloop-agent/actions/workflows/tests.yml/badge.svg)](https://github.com/1105216375-alt/engiloop-agent/actions/workflows/tests.yml) [![License: AGPL-3.0-only](https://img.shields.io/badge/License-AGPL--3.0--only-blue.svg)](LICENSE) [![Python: 3.10+](https://img.shields.io/badge/Python-3.10%2B-3776AB.svg)](pyproject.toml)
 
-**Models propose. Symbolic mechanisms constrain execution. Evidence limits what can be concluded.**
+**Models propose. Domain engines compute. Evidence gates delivery.**
 
-A neuro-symbolic reference implementation extracted from a bridge-inspection agent: structured intake, residual-driven reasoning, reverse evidence verification, governed memory, bounded computation, and checkpoint recovery. It includes the execution kernel, domain adapters, eight offline examples, and counterexample tests that inspect the final result—not just the logs.
+EngiLoop combines general-purpose LLMs with local symbolic knowledge, deterministic domain engines, residual-guided reasoning, and independent evidence checks—to build domain agents whose decisions can be inspected, challenged, and traced.
 
-[Quick start](#quick-start) · [Architecture](docs/architecture.en.md) · [Runnable mechanisms](#eight-mechanisms-you-can-run) · [Security](SECURITY.md) · [Contributing](CONTRIBUTING.md)
+Extracted from a bridge-inspection application, this reference implementation turns missing evidence, wrong-object numbers, and failed checks into changes in execution and output. **Start with three runnable stories, not a list of architecture buzzwords.** LLM integration is optional; the demos use scripted candidates and synthetic inputs with the actual checking and reasoning code.
+
+[Run the demos](#quick-start) · [Three stories](#three-stories-you-can-run) · [Architecture](docs/architecture.en.md) · [Eight mechanisms](#eight-mechanisms-you-can-run) · [中文](README.zh-CN.md)
 
 > **Release scope:** reusable mechanisms, not a complete production application or a certified engineering assessment service. Private archives, standards corpora, corporate databases, model credentials, and the product UI are excluded. Extracted code, public adaptations, and extension points are distinguished in the [source map](docs/source-map.md) and [release boundaries](docs/release-boundaries.md) (Chinese).
+
+## Three stories you can run
+
+![Three executable synthetic demos: a conflicting report is withheld; evidence gaps shrink from two to zero; a rule-pack change invalidates an old scoring snapshot.](docs/assets/three-demos.svg)
+
+### 01 · A convincing report can still be wrong
+
+A synthetic Word report claims a main-girder **risk score of 92** and cites a nonexistent clause. The separately supplied main-girder evidence says **80**. The report is parsed with row provenance; the numeric and citation checks withhold the draft. A second probe tries to use a bearing's score for the girder—it is withheld too. A replacement built from the evidence is checked before display.
+
+```bash
+python -m examples.showcase report
+```
+
+**What to inspect:** the rejected text, issue categories, independent evidence, DOCX source coordinates, and delivered replacement. The report does not validate itself. Risk scores here are synthetic diagnostic values, not bridge condition grades.
+
+### 02 · Missing evidence is unfinished work
+
+Ask for a cross-indicator risk screening with both required scores missing. Add one score, then the other, to the **same fixture session**. Each re-evaluation leaves **2 → 1 → 0** scoring requirements open; the requested screening is withheld until both inputs are present. Missing data is never replaced by zero, and the resulting screening still does not establish load capacity or traffic safety.
+
+```bash
+python -m examples.showcase residual
+```
+
+The same command also runs two **separate, labeled** mechanisms: conversational intake reduces missing fields **4 → 2 → 0** without turning “a palm long” into a measurement; fault injection demonstrates rejection before commit and rollback after an invalid state update. These are not presented as one end-to-end field assessment.
+
+### 03 · Update the rules. Not the model
+
+Keep observations and scoring code fixed. Switch an explicit **synthetic rule pack** from v1 to v2: the example's main-girder deduction changes **20 → 40**, its component score **80 → 60**, and the selected-scope result **81.46 → 64.39**. A content-bound reuse check rejects the old snapshot under the new pack; recomputation binds the new result to the new rules.
+
+```bash
+python -m examples.showcase rules
+```
+
+Edit the [v2 rule data](examples/fixtures/rules_v2.json) and run it again. No model weights, prompt, or scoring formula need changing. This is an explicit configuration/recomputation example—not automatic extraction of standards, authorization of rule changes, or a production cache invalidation service.
+
+**All three run offline, without an API key.** Add `--json` for machine-readable evidence and state. These are executable synthetic examples, not model-accuracy benchmarks. [Read the reproduction guide](docs/showcase.md).
 
 ## Intelligence needs an execution contract
 
@@ -99,6 +135,7 @@ cd engiloop-agent
 python -m venv .venv
 source .venv/bin/activate
 python -m pip install -e '.[dev]'
+python -m examples.showcase
 python -m pytest
 python -m examples.all_mechanisms
 ```
@@ -140,6 +177,7 @@ Road maintenance and equipment inspection are potential adaptations—not comple
 
 | Guide | Language |
 |---|---|
+| [Three runnable stories: inputs, checks, and boundaries](docs/showcase.md) | English |
 | [Architecture, execution order, and boundaries](docs/architecture.en.md) | English · [中文](docs/architecture.md) |
 | [Neuro-symbolic conversion](docs/neural-symbolic.md) | Chinese |
 | [Reverse RAG and graph-backed checks](docs/reverse-rag.md) | Chinese |

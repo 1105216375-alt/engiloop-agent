@@ -1,0 +1,12 @@
+{
+  "schema": 1,
+  "id": "SYNTHETIC-DEMO-RULES",
+  "version": "2.0",
+  "synthetic": true,
+  "source": "synthetic://rules/demo-only/v2",
+  "notice": "Invented demonstration mappings. Not an engineering standard.",
+  "rules": [
+    {"component": "主梁", "disease": "合成裂缝", "scale": 3, "deduction": 40, "clause": "DEMO-MAIN-01"},
+    {"component": "支座", "disease": "合成支座脱空", "scale": 2, "deduction": 10, "clause": "DEMO-BEAR-01"}
+  ]
+}

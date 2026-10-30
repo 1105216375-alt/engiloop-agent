@@ -8,6 +8,7 @@ The homepage artwork is an AI-generated conceptual illustration, not a product s
 - `hero-engiloop.png`: generated using the built-in image editing tool from `hero.png`, preserving the conceptual design while changing the title to EngiLoop. The original is retained.
 - `execution-contract.svg`: neural, symbolic, verification, and evidence responsibilities.
 - `residual-intake.svg`: a synthetic language-to-structure example with explicit unresolved evidence.
+- `three-demos.svg`: code-authored overview of the reproducible `examples.showcase` outcomes; synthetic report conflict, scoring-evidence gaps, and rule-pack switching. Not a live product screenshot.
 
 The project visuals in the current version are offered under AGPL-3.0-only, without third-party company marks or endorsement. Earlier versions through commit `dd539c8` were offered under Apache-2.0; the prior grant for those versions remains effective.
 

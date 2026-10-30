@@ -22,7 +22,7 @@ DIRECTORIES = {'engineering_agent', 'bip_runtime', 'domain', 'nskernel',
 ROOT_FILES = {'README.md', 'README.zh-CN.md', 'LICENSE', 'NOTICE', 'SECURITY.md', 'CONTRIBUTING.md',
               'MANIFEST.in', 'pyproject.toml', '.gitignore', 'LICENSES/Apache-2.0.txt'}
 VISUAL_FILES = {'docs/assets/hero.png', 'docs/assets/hero-engiloop.png', 'docs/assets/execution-contract.svg',
-                'docs/assets/residual-intake.svg'}
+                'docs/assets/residual-intake.svg', 'docs/assets/three-demos.svg'}
 MAX_VISUAL_BYTES = 10 * 1024 * 1024
 IGNORED = {'.git', '.venv', '__pycache__', '.pytest_cache', 'build', 'dist',
            'outputs', 'runtime'}

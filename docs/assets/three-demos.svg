@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="760" viewBox="0 0 1440 760" role="img" aria-labelledby="title desc">
+  <title id="title">Three ways to see EngiLoop verification change an outcome</title>
+  <desc id="desc">Synthetic executable examples. A draft risk score of 92 conflicts with independent evidence of 80 and is withheld. Missing scoring inputs shrink from two to one to zero. Updating an invented rule pack changes a main-girder condition score from 80 to 60 and makes the old snapshot stale. No model calls or engineering sign-off.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#091828"/><stop offset="1" stop-color="#102939"/>
+    </linearGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#40ddd0"/><stop offset="1" stop-color="#619bff"/>
+    </linearGradient>
+    <style>
+      text {font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;}
+      .white {fill:#f2f7fc} .muted {fill:#a9c2d4} .cyan {fill:#54dfd3}
+      .label {font-size:18px;font-weight:600;letter-spacing:1px}
+      .body {font-size:22px} .small {font-size:19px} .heading {font-size:28px;font-weight:700}
+      .value {font-size:76px;font-weight:750;letter-spacing:-3px}
+    </style>
+  </defs>
+  <rect width="1440" height="760" rx="24" fill="url(#bg)"/>
+  <path d="M48 0 H1392" stroke="url(#line)" stroke-width="5"/>
+  <text x="52" y="57" class="cyan label">ENGILOOP / EXECUTABLE STORIES</text>
+  <text x="52" y="112" class="white" font-size="40" font-weight="700">What changes when verification is part of execution?</text>
+  <text x="52" y="151" class="muted body">Synthetic inputs. Real checks. Outcomes you can reproduce.</text>
+
+  <g transform="translate(48 192)">
+    <rect width="432" height="432" rx="16" fill="#102436" stroke="#294457"/>
+    <text x="26" y="42" class="cyan label">01 / CHALLENGE THE REPORT</text>
+    <text x="26" y="90" class="white heading">Plausible is not supported.</text>
+    <text x="26" y="149" class="muted small">Draft risk score</text>
+    <text x="247" y="149" class="muted small">Source evidence</text>
+    <text x="23" y="231" class="value" fill="#ff9999">92</text>
+    <text x="246" y="231" class="value cyan">80</text>
+    <path d="M155 203 H208 M196 191 L208 203 L196 215" fill="none" stroke="#819eb2" stroke-width="3"/>
+    <rect x="26" y="265" width="380" height="52" rx="8" fill="#412a34"/>
+    <text x="216" y="298" text-anchor="middle" font-size="22" font-weight="700" fill="#ffb7b7">CONFLICTING DRAFT WITHHELD</text>
+    <text x="26" y="357" class="muted body">Object-bound numeric checks.</text>
+    <text x="26" y="391" class="muted body">Missing citation caught, too.</text>
+  </g>
+
+  <g transform="translate(504 192)">
+    <rect width="432" height="432" rx="16" fill="#102436" stroke="#294457"/>
+    <text x="26" y="42" class="cyan label">02 / COMPLETE THE EVIDENCE</text>
+    <text x="26" y="90" class="white heading">Keep unfinished work visible.</text>
+    <text x="26" y="149" class="muted small">Remaining scoring requirements</text>
+    <text x="28" y="231" class="value" fill="#f5ca78">2</text>
+    <text x="183" y="231" class="value" fill="#f5ca78">1</text>
+    <text x="336" y="231" class="value cyan">0</text>
+    <path d="M104 203 H144 M132 191 L144 203 L132 215 M259 203 H299 M287 191 L299 203 L287 215" fill="none" stroke="#819eb2" stroke-width="3"/>
+    <rect x="26" y="265" width="380" height="52" rx="8" fill="#173e42"/>
+    <text x="216" y="298" text-anchor="middle" font-size="21" font-weight="700" fill="#8defdf">SUPPLY INPUTS. RE-EVALUATE.</text>
+    <text x="26" y="357" class="muted body">Missing data is never zero.</text>
+    <text x="26" y="391" class="muted body">Screening is not safety sign-off.</text>
+  </g>
+
+  <g transform="translate(960 192)">
+    <rect width="432" height="432" rx="16" fill="#102436" stroke="#294457"/>
+    <text x="26" y="42" class="cyan label">03 / CHANGE THE RULE PACK</text>
+    <text x="26" y="90" class="white heading">Update rules. Not the model.</text>
+    <text x="26" y="149" class="muted small">v1 component score</text>
+    <text x="264" y="149" class="muted small">v2 score</text>
+    <text x="23" y="231" class="value white">80</text>
+    <text x="260" y="231" class="value cyan">60</text>
+    <path d="M167 203 H220 M208 191 L220 203 L208 215" fill="none" stroke="#819eb2" stroke-width="3"/>
+    <rect x="26" y="265" width="380" height="52" rx="8" fill="#243c59"/>
+    <text x="216" y="298" text-anchor="middle" font-size="22" font-weight="700" fill="#b5d3ff">OLD SNAPSHOT: RECOMPUTE</text>
+    <text x="26" y="357" class="muted body">Same observations and engine.</text>
+    <text x="26" y="391" class="muted body">Versioned, synthetic rule data.</text>
+  </g>
+
+  <rect x="48" y="652" width="1344" height="60" rx="10" fill="#071621" stroke="#294457"/>
+  <text x="73" y="690" fill="#d6edf2" font-size="23" font-family="monospace">python -m examples.showcase</text>
+  <text x="1366" y="689" text-anchor="end" class="muted small">Offline / No API key / Evidence available as JSON</text>
+  <text x="52" y="740" class="muted" font-size="16">Illustrated outcomes from synthetic examples. No live model run, real-standard validation, or automatic engineering approval is implied.</text>
+</svg>

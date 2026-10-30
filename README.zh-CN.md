@@ -1,18 +1,56 @@
 [English](README.md) · 简体中文
 
+![EngiLoop 神经符号工程概念图，非生产截图。](docs/assets/hero-engiloop.png)
+
 # EngiLoop
 
-原名 Engineering Domain Agent。Python 分发包名仍为 `engineering-domain-agent`，导入名仍为 `engineering_agent`，以保持兼容。
+### 以神经—符号执行构建可验证的领域智能体
 
-## 工程垂域智能体：让验证参与执行
+**模型提出候选，领域引擎负责计算，证据核验把守交付。**
 
-**模型理解与提出候选，符号系统执行与约束，证据决定结论可以走多远。**
+EngiLoop 将通用大模型与本地符号知识、确定性领域引擎、残差驱动推理和独立证据核验结合，让领域智能体的处理过程可检查、可质疑、可追溯。
 
-从“桥梁医生”的工程应用代码中抽取的神经—符号机制，当前版本按 **AGPL-3.0-only** 开放。这里不仅公开组合思路，也提供实际内核、桥梁领域适配、合成案例和能改变最终结果的反例测试。
+代码抽取自“桥梁医生”，当前按 **AGPL-3.0-only** 开放。先看三个能亲自运行的演示：缺证据、用错数、规则变化，确实会改变系统能交付什么。模型接入是可选项；离线演示使用合成输入与脚本候选，不冒充真实模型调用。
 
-Engineering-domain neuro-symbolic execution extracted from a bridge diagnostic application: structured intake, residual reasoning, reverse evidence verification, governed memory, bounded computation, and checkpoint recovery. Offline synthetic examples are reproducible without model credentials or private archives.
+[快速开始](#快速开始) · [三个演示](#三个演示看懂机制) · [架构](docs/architecture.md) · [运行说明](docs/showcase.md)
 
 > 这是机制级参考实现，不是原生产产品的完整镜像或可直接签发的工程评定服务。真实档案、规范全文、企业数据库、模型账号和产品 UI 不随仓库分发；原实现抽取、新增适配与未实现接口明确区分。见[来源映射](docs/source-map.md)和[发布边界](docs/release-boundaries.md)。
+
+## 三个演示，看懂机制
+
+![错误报告被扣留、缺口逐步减少、规则变化触发重算：三个合成案例的真实执行结果。](docs/assets/three-demos.svg)
+
+### 01 · 报告写得像真的，不代表证据支持
+
+合成 Word 草稿写“主梁风险评分 92”，另附的独立证据为 80，还引用了不存在的条款。系统保留表格来源定位，反查数字与条款，**扣留错误草稿**。再试一次“拿支座的 30 分证明主梁”，同样被拦截。依据证据生成的替换句还要再核验。
+
+```bash
+python -m examples.showcase report
+```
+
+这里展示的是**反向 RAG 如何改变输出**，不是多展示几条检索结果。风险评分不是技术状况得分；替换句来自显式模板，不冒称模型自主纠错。
+
+### 02 · 证据没补齐，就不假装任务已经完成
+
+同一个合成会话先缺两个评分，再补一个，最后补齐：**评分缺口 2 → 1 → 0**。每次重跑真实推理代码，在条件不足时不输出交叉风险判断，缺失值不补零。条件补齐后也只给技术状况筛查，不外推承载能力或通行安全。
+
+```bash
+python -m examples.showcase residual
+```
+
+同一命令另附两个独立示例：口语录入的缺失字段 **4 → 2 → 0**，但“一巴掌长”不当量测；故障注入展示核验拒绝不提交、非法状态更新后回退。三者分开标注，不假装是一份真实档案贯通了全部流程。
+
+### 03 · 更新规则配置，不用重新训练模型
+
+输入记录、模型与评分公式不变，只切换合成规则包：示例扣分 **20 → 40**，构件分 **80 → 60**，指定范围分 **81.46 → 64.39**。规则摘要变化后旧快照不能继续复用，重算结果绑定新规则版本。
+
+```bash
+python -m examples.showcase rules
+```
+
+可以修改 [v2 规则数据](examples/fixtures/rules_v2.json) 再运行。数字来自自拟演示映射，不是真实规范；展示的是显式规则切换、结果绑定与复算，不是自动识别新规范或生产级缓存失效平台。
+
+三个演示都不需要 API 密钥。添加 `--json` 可看原始证据、核验问题、缺口及状态明细；这不是现场准确率评估。
 
 ### 核心不是多加一个模型，而是改变采信路径
 
@@ -59,12 +97,17 @@ flowchart TD
 Python 3.10+。以下示例默认离线；安装依赖需要常规包源访问。Windows 激活虚拟环境使用 `.venv\Scripts\Activate.ps1`。
 
 ```bash
+git clone https://github.com/1105216375-alt/engiloop-agent.git
+cd engiloop-agent
 python -m venv .venv
 source .venv/bin/activate
 python -m pip install -e '.[dev]'
+python -m examples.showcase
 python -m pytest
 python -m examples.all_mechanisms
 ```
+
+原名 Engineering Domain Agent。Python 分发包名仍为 `engineering-domain-agent`，导入名仍为 `engineering_agent`，以保持兼容。
 
 也可以单独执行：
 

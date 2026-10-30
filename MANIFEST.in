@@ -1,6 +1,7 @@
 include LICENSE NOTICE README.md README.zh-CN.md SECURITY.md CONTRIBUTING.md
 include LICENSES/Apache-2.0.txt
-include docs/assets/hero.png docs/assets/execution-contract.svg docs/assets/residual-intake.svg
+include docs/assets/hero.png docs/assets/hero-engiloop.png docs/assets/execution-contract.svg docs/assets/residual-intake.svg docs/assets/three-demos.svg
+recursive-include examples/fixtures *.json
 recursive-include docs *.md *.json
 recursive-include tests *.py
 recursive-include tools *.py
