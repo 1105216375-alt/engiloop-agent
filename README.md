@@ -54,6 +54,12 @@ Edit the [v2 rule data](examples/fixtures/rules_v2.json) and run it again. No mo
 
 **All three run offline, without an API key.** Add `--json` for machine-readable evidence and state. These are executable synthetic examples, not model-accuracy benchmarks. [Read the reproduction guide](docs/showcase.md).
 
+### Why verification must change execution
+
+[Axiom reports](https://axiommath.ai/research/the-enormous-theorem-formalized/) a Lean formalization of the classification of finite simple groups, whose original proof literature spans roughly 15,000 pages. It raises a question for engineering agents: **who checks the answer before it is used?**
+
+Lean checks proofs of formal mathematical statements. EngiLoop instead applies implemented rule calculations and evidence-consistency checks to covered engineering claims; its demos use synthetic inputs, not a complete standards corpus. These are different kinds and strengths of assurance—not equivalent proofs. Both motivate a practical principle: **generation is not verification; checks must be able to change what gets delivered.**
+
 ## Intelligence needs an execution contract
 
 An engineering agent must do more than produce a convincing answer. It must preserve the distinction between a suggestion, a calculation, an observation, and an authorized conclusion.
